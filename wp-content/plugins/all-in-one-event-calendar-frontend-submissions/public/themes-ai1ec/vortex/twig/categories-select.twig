@@ -1,0 +1,21 @@
+<select class="ai1ec-categories-selector ai1ec-select2-multiselect-selector"
+	id="{{ id }}" name="{{ name }}"
+	placeholder="{{ 'Categories (optional)' | __ | e('html_attr') }}"
+	data-placeholder="{{ 'Categories (optional)' | __ | e('html_attr') }}"
+	multiple="multiple">
+	{% for term in categories %}
+		<option value="{{ term.term_id }}"
+			{% if term.term_id in selected_cat_ids %}
+      	selected="selected"
+      {% endif %}
+			{% if term.description is not empty %}
+				data-description="{{ term.description | e('html_attr') }}"
+			{% endif %}
+			{% if term.color is not empty %}
+				data-color="{{ term.color | e('html_attr') }}"
+			{% endif %}
+			>
+			{{ term.name }}
+		</option>
+	{% endfor %}
+</select>

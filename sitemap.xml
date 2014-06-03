@@ -1,0 +1,885 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="http://www.ulearnschool.com/blog/wp-content/plugins/google-sitemap-generator/sitemap.xsl"?><!-- generator="wordpress/3.8.1" -->
+<!-- sitemap-generator-url="http://www.arnebrachhold.de" sitemap-generator-version="3.4" -->
+<<<<<<< HEAD
+<!-- generated-on="28/03/2014 11:06" -->
+<!-- Debug: Total comment count: 1 -->
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">	<url>
+		<loc>http://www.ulearnschool.com/blog/</loc>
+		<lastmod>2014-03-18T10:59:52+00:00</lastmod>
+=======
+<!-- generated-on="25/03/2014 11:57" -->
+<!-- Debug: Total comment count: 1 -->
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">	<url>
+		<loc>http://www.ulearn.ie/blog/</loc>
+		<lastmod>2014-03-25T01:56:59+00:00</lastmod>
+>>>>>>> 2572e5d6954753acc5aa6caa6c0a8b54e9978f12
+		<changefreq>daily</changefreq>
+		<priority>1.0</priority>
+	</url>
+<!-- Debug: Start Postings -->
+<!-- Debug: Priority report of postID 1993: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearn.ie/blog/ulearn-english-school-visits-giants-causeway/</loc>
+		<lastmod>2014-03-24T18:11:29+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 1980: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearn.ie/blog/ulearn-goes-horse-riding/</loc>
+		<lastmod>2014-03-24T13:03:37+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 1970: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/st-patricks-day-around-the-world/</loc>
+		<lastmod>2014-03-18T10:59:52+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 1726: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/english-school-in-georgian-dublin/</loc>
+		<lastmod>2014-03-14T14:29:46+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+	<url>
+		<loc>http://www.ulearnschool.com/blog/english-school-dublin-video/</loc>
+		<lastmod>2014-03-14T14:27:15+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+<!-- Debug: Priority report of postID 1917: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/lets-get-speed-dating/</loc>
+		<lastmod>2014-02-27T11:59:49+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 1912: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/lets-get-sporty/</loc>
+		<lastmod>2014-01-28T12:24:27+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 1897: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/ulearn-guinness-storehouse-visit/</loc>
+		<lastmod>2014-01-21T11:49:47+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 1889: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/1889/</loc>
+		<lastmod>2014-01-20T12:44:28+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 1874: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/whats-happening-this-week-2/</loc>
+		<lastmod>2014-01-13T12:40:39+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 1857: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/a-visit-to-trinity-college/</loc>
+		<lastmod>2014-01-10T17:53:17+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 1837: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/whats-happening-this-week/</loc>
+		<lastmod>2014-01-06T11:49:14+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 1826: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/whats-on-this-week-3/</loc>
+		<lastmod>2013-12-16T11:28:19+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 1813: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/whats-on-this-week-2/</loc>
+		<lastmod>2013-12-09T13:49:53+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 1803: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/jameson-distillery-visit/</loc>
+		<lastmod>2013-12-06T14:21:26+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 1793: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/whats-on-this-week/</loc>
+		<lastmod>2013-12-03T12:14:11+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 1778: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/dublinia-a-walk-into-viking-dublin/</loc>
+		<lastmod>2013-11-28T19:21:40+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 1761: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/christmas-time-in-november/</loc>
+		<lastmod>2013-11-28T18:56:44+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 1742: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/science-week-comes-to-dublin/</loc>
+		<lastmod>2013-11-19T10:47:43+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 1704: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/halloween-an-irish-festival/</loc>
+		<lastmod>2013-10-30T17:52:23+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 1677: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/the-apps-that-make-life-easy/</loc>
+		<lastmod>2013-10-22T11:40:46+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 1656: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/dublin-bike-crazy/</loc>
+		<lastmod>2013-10-15T11:05:51+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 1629: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/irish-football-and-the-glory-days/</loc>
+		<lastmod>2013-10-09T17:02:24+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 1624: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/irish-castles/</loc>
+		<lastmod>2013-10-07T16:04:06+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 1600: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/time-for-a-picnic/</loc>
+		<lastmod>2013-08-28T16:30:11+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 1584: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/festivals-coming-soon/</loc>
+		<lastmod>2013-08-15T10:24:18+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 1575: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/more-than-just-potatoes/</loc>
+		<lastmod>2013-07-31T11:02:59+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 1563: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/irish-pubs-are-they-changing/</loc>
+		<lastmod>2013-07-24T15:30:55+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 1533: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/dublin-double/</loc>
+		<lastmod>2013-07-16T13:31:27+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 1509: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/a-heatwave-at-english-school-dublin/</loc>
+		<lastmod>2013-07-11T09:25:18+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 262: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/english-school-dublin-in-howth/</loc>
+		<lastmod>2013-07-05T07:14:17+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 1465: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/a-trip-to-the-gardens-for-english-school-dublin/</loc>
+		<lastmod>2013-07-03T11:16:18+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 1446: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/english-school-dublin-sees-the-work-of-caravaggio/</loc>
+		<lastmod>2013-06-26T11:28:57+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 1348: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/ulearn-english-school-dublin-goes-to-the-savoy/</loc>
+		<lastmod>2013-06-06T10:40:12+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 1335: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/english-school-dublin-goes-to-chester-beatty/</loc>
+		<lastmod>2013-05-31T13:30:29+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 1305: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/ulearn-english-school-dublin-goes-to-the-archaeology-museum/</loc>
+		<lastmod>2013-05-22T10:47:59+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+	<url>
+		<loc>http://www.ulearnschool.com/blog/about-us/</loc>
+		<lastmod>2013-05-21T03:13:34+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+<!-- Debug: Priority report of postID 1278: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/ulearn-english-school-dubln-hangout/</loc>
+		<lastmod>2013-05-18T16:40:02+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 1252: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/summer-festivals-in-ireland/</loc>
+		<lastmod>2013-05-16T12:33:10+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 301: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/english-school-dublin-ulearn-school/</loc>
+		<lastmod>2013-05-14T23:29:02+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 1227: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/science-gallery-dublin/</loc>
+		<lastmod>2013-05-09T14:23:13+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+	<url>
+		<loc>http://www.ulearnschool.com/blog/ulearn-mai/</loc>
+		<lastmod>2013-05-08T13:48:44+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+	<url>
+		<loc>http://www.ulearnschool.com/blog/contact-us/</loc>
+		<lastmod>2013-05-08T13:47:34+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+	<url>
+		<loc>http://www.ulearnschool.com/blog/calendar/</loc>
+		<lastmod>2013-05-08T13:46:43+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+	<url>
+		<loc>http://www.ulearnschool.com/blog/us-on-flickr/</loc>
+		<lastmod>2013-05-08T13:43:51+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+	<url>
+		<loc>http://www.ulearnschool.com/blog/ulearn-event-zine/</loc>
+		<lastmod>2013-05-08T13:41:24+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+<!-- Debug: Priority report of postID 1199: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/ship-visit-photos-ulearn-english-school-dublin-2/</loc>
+		<lastmod>2013-05-07T15:47:21+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 1005: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/english-school-dublin-visit-jeanie-johnston-tallship-and-museum/</loc>
+		<lastmod>2013-05-06T08:15:19+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 5: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/is-cheap-ok/</loc>
+		<lastmod>2013-05-04T12:14:48+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 98: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/ulearn-english-language-school-dublin-six-nations/</loc>
+		<lastmod>2013-05-04T12:14:20+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 81: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/ulearn-english-language-school-dublin-mummies/</loc>
+		<lastmod>2013-05-04T12:14:04+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 77: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/ulearners-english-language-school-dublin/</loc>
+		<lastmod>2013-05-04T12:13:56+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 42: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/englsh-language-school-dublin-courses/</loc>
+		<lastmod>2013-05-04T12:13:42+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 40: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/best-english-language-school-dublin/</loc>
+		<lastmod>2013-05-04T12:13:27+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 37: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/cambridge-exam-english-language-school-dublin/</loc>
+		<lastmod>2013-05-04T12:13:00+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 35: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/english-language-school-in-dublin-2nd-life/</loc>
+		<lastmod>2013-05-04T12:12:37+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 33: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/english-language-school-dublin-2/</loc>
+		<lastmod>2013-05-04T12:12:14+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 31: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/english-language-school-dublin-ulearn/</loc>
+		<lastmod>2013-05-04T12:11:59+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 28: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/english-language-school-dublin-ielts/</loc>
+		<lastmod>2013-05-04T12:11:45+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 24: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/english-language-school-dublin/</loc>
+		<lastmod>2013-05-04T12:11:23+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 20: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/sentence-auctions/</loc>
+		<lastmod>2013-05-04T12:10:48+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 17: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/where-art-thou-google/</loc>
+		<lastmod>2013-05-04T12:10:40+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 11: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/learn-english-online-free-for-everyone/</loc>
+		<lastmod>2013-05-04T12:10:28+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 46: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/epic-english-blog/</loc>
+		<lastmod>2013-05-04T12:00:14+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 87: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/dublin-film-festival-english-courses-dublin/</loc>
+		<lastmod>2013-05-04T11:58:46+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 93: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/quality-english-school-dublin-culture/</loc>
+		<lastmod>2013-05-04T11:58:11+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 102: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/live-music-venues-ulearn-english-school-dublin/</loc>
+		<lastmod>2013-05-04T11:57:12+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 107: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/gaelic-games-english-school-dublin/</loc>
+		<lastmod>2013-05-04T11:56:39+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 118: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/ulearn-english-school-dublin-visits-classes/</loc>
+		<lastmod>2013-05-04T11:56:19+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 135: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/english-school-dublin-cathedrals/</loc>
+		<lastmod>2013-05-04T11:55:45+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 146: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/ulearn-english-school-dublin-patricks-festival/</loc>
+		<lastmod>2013-05-04T11:55:07+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 149: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/english-school-dublin-saint-patrick/</loc>
+		<lastmod>2013-05-04T11:54:24+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 153: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/practicing-english-school-dublin-ulearn/</loc>
+		<lastmod>2013-05-04T11:54:24+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 156: Comments: 1 of 1 = 1 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/ulearn-english-school-dublin-electric-picnic/</loc>
+		<lastmod>2013-05-04T11:52:33+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>1.0</priority>
+	</url>
+<!-- Debug: Priority report of postID 164: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/ulearn-english-school-dublin-visits-museum/</loc>
+		<lastmod>2013-05-04T11:52:07+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 168: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/the-spire-ulearn-english-school/</loc>
+		<lastmod>2013-05-04T11:51:33+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 172: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/best-english-school-dublin-ulearn-2/</loc>
+		<lastmod>2013-05-04T11:51:13+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 175: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/food-for-thought-at-ulearn-english-school-dublin/</loc>
+		<lastmod>2013-05-04T11:50:48+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 181: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/english-school-dublin-dance/</loc>
+		<lastmod>2013-05-04T11:50:27+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 184: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/ulearn-english-school-comedy-from-ireland/</loc>
+		<lastmod>2013-05-04T11:50:08+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 187: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/cheap-english-course-dublin/</loc>
+		<lastmod>2013-05-04T11:49:43+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 190: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/english-courses-dublin/</loc>
+		<lastmod>2013-05-04T11:49:12+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 193: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/english-school-dublin-ulearn-irish-premier-league/</loc>
+		<lastmod>2013-05-04T11:48:48+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 195: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/ulearn-english-school-ireland-rory-gallagher/</loc>
+		<lastmod>2013-05-04T11:48:28+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 198: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/english-school-dublin-phil-lynott/</loc>
+		<lastmod>2013-05-04T11:47:59+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 202: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/ulearn-english-school-dublin-video/</loc>
+		<lastmod>2013-05-04T11:47:41+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 213: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/english-school-dublin-indian/</loc>
+		<lastmod>2013-05-04T11:46:25+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 224: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/english-school-dublin-easter-rising/</loc>
+		<lastmod>2013-05-04T11:45:58+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 228: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/ulearn-english-school-european-rugby-cup/</loc>
+		<lastmod>2013-05-04T11:37:47+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 232: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/english-school-dublin-titanic-the-irish-connection/</loc>
+		<lastmod>2013-05-04T11:37:27+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 235: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/tintin-anyone-ulearn-english-school-dublin/</loc>
+		<lastmod>2013-05-04T11:36:57+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 239: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/english-course-dublin-monster-truck-gallery/</loc>
+		<lastmod>2013-05-04T11:36:29+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 243: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/english-school-dublin-street-art-traffic-light-boxes/</loc>
+		<lastmod>2013-05-04T11:36:03+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 247: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/english-school-dublin-euro-2012-and-88/</loc>
+		<lastmod>2013-05-04T11:35:38+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 251: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/english-school-dublin-james-joyce/</loc>
+		<lastmod>2013-05-04T11:35:14+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 256: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/english-school-dublin-shopping-instruments/</loc>
+		<lastmod>2013-05-04T11:34:49+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 269: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/punk-in-english-school-dublin/</loc>
+		<lastmod>2013-05-04T11:33:50+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 271: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/english-school-dublin-happy/</loc>
+		<lastmod>2013-05-04T11:33:37+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 274: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/english-school-dublin-beckett/</loc>
+		<lastmod>2013-05-04T11:33:12+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 278: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/english-school-dublin-festival/</loc>
+		<lastmod>2013-05-04T11:32:31+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 281: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/ulearn-best-englis-school-dublin/</loc>
+		<lastmod>2013-05-04T11:32:21+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 284: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/english-school-dublin-writers/</loc>
+		<lastmod>2013-05-04T11:31:58+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 287: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/english-school-dublin-social/</loc>
+		<lastmod>2013-05-04T11:31:35+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 291: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/learn-english-at-ulearn-english-school-dublin/</loc>
+		<lastmod>2013-05-04T11:31:17+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 294: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/english-school-dublin-ulearn-ireland-learn/</loc>
+		<lastmod>2013-05-04T11:31:02+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 297: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/best-english-school-dublin-ulearn/</loc>
+		<lastmod>2013-05-04T11:30:34+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 306: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/english-classes-dublin/</loc>
+		<lastmod>2013-05-04T11:29:52+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 310: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/english-course-dublin-ulearn/</loc>
+		<lastmod>2013-05-04T11:29:39+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 314: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/english-school-dublin-katie-taylor/</loc>
+		<lastmod>2013-05-04T11:29:25+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 317: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/english-school-dublin-writers-museum/</loc>
+		<lastmod>2013-05-04T11:29:08+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 321: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/ulearn-english-school-ireland/</loc>
+		<lastmod>2013-05-04T11:28:50+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 325: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/ulearn-english-school-templebar/</loc>
+		<lastmod>2013-05-04T11:28:31+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 332: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/ulearn-english-school-dublin-bloomsday/</loc>
+		<lastmod>2013-05-04T11:28:04+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 336: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/ulearn-english-school-dublin-ireland-football/</loc>
+		<lastmod>2013-05-04T11:27:40+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 339: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/english-school-dublin-ulearn-visits-museum/</loc>
+		<lastmod>2013-05-04T11:27:12+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 392: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/ulearn-english-school-dublin-social/</loc>
+		<lastmod>2013-05-04T11:26:43+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 677: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/english-school-dublin-lea/</loc>
+		<lastmod>2013-05-04T11:19:49+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 571: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/ulearn-english-school-dublin-visits-christchurch/</loc>
+		<lastmod>2013-05-03T10:52:49+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 341: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/what-a-bloomsday/</loc>
+		<lastmod>2013-05-03T10:25:42+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 357: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/the-guinness-storehouse-this-weeks-ulearn-cultural-trip/</loc>
+		<lastmod>2013-05-03T10:25:24+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 519: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/ulearn-english-school-dublin-social-networking-for-you/</loc>
+		<lastmod>2013-05-03T10:24:19+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 441: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/english-school-dublin-enjoys-the-scenery/</loc>
+		<lastmod>2013-04-22T05:56:12+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+	<url>
+		<loc>http://www.ulearn.ie</loc>
+		<lastmod>2013-04-22T02:38:57+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+<!-- Debug: Priority report of postID 141: Comments: 0 of 1 = 0 points -->
+	<url>
+		<loc>http://www.ulearnschool.com/blog/st-patricks-cathedral/</loc>
+		<lastmod>2013-04-11T19:35:03+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: End Postings -->
+<!-- Debug: Start Custom Pages -->
+<!-- Debug: End Custom Pages -->
+<!-- Debug: Start additional URLs -->
+<!-- Debug: End additional URLs -->
+</urlset>

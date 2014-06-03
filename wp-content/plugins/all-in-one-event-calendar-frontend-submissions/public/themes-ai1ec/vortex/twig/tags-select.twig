@@ -1,0 +1,6 @@
+<input type="text" class="ai1ec-tags-selector"
+	id="{{ id }}" name="{{ name }}"
+	placeholder="{{ 'Tags (optional)' | __ | e('html_attr') }}"
+	data-placeholder="{{ 'Tags (optional)' | __ | e('html_attr') }}"
+	data-ai1ec-tags='{{ tags_json | raw }}'
+	value="{{ selected_tag_ids | raw }}" />

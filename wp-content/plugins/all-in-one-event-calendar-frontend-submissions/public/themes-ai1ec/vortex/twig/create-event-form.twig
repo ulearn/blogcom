@@ -1,0 +1,349 @@
+<div class="ai1ec-modal-header">
+	<button type="button" class="ai1ec-close" data-dismiss="ai1ec-modal">×</button>
+	<h2>{{ 'Post Your Event' | __}}</h2>
+</div>
+
+<form class="ai1ec-create-event-form ai1ec-form-horizontal" method="POST"
+	action="{{ form_action | e('html_attr') }}">
+
+{{ nonce_field | raw }}
+<input type="hidden" name="ai1ec_start_time" id="ai1ec-start-time" />
+<input type="hidden" name="ai1ec_end_time" id="ai1ec-end-time" />
+<input type="hidden" name="ai1ec_all_day_event" id="ai1ec-all-day-event" />
+<input type="hidden" name="ai1ec_instant_event" id="ai1ec-instant-event" />
+
+<div class="ai1ec-modal-body">
+
+	{# Alerts (hidden by default). #}
+	<div class="ai1ec-alert ai1ec-alert-danger ai1ec-hide ai1ec-missing-field">
+		{{ 'The %s field is required.' | __ | format( '<em></em>' ) | raw }}
+	</div>
+	{% if require_disclaimer %}
+		<div class="ai1ec-alert ai1ec-alert-danger ai1ec-hide ai1ec-required-disclaimer">
+			{{ 'You must check the checkbox stating you agree to the posting rules to submit the event.' | __ }}
+		</div>
+	{% endif %}
+	<div class="ai1ec-alert ai1ec-alert-danger ai1ec-hide ai1ec-submit-error"></div>
+
+	{% if require_disclaimer %}
+		<div class="ai1ec-row">
+			<label for="require_disclaimer" class="ai1ec-checkbox">
+				<input type="checkbox" id="require_disclaimer" value="1" />
+					{{ 'I have read and agreed that this event conforms to the <a %s>posting rules</a>' | __
+						| format( 'data-toggle="ai1ec-collapse" data-target="#show_disclaimer" class="ai1ec-collapsible-toggle" id="open_require_disclaimer"' )
+					}}
+			</label>
+		</div>
+		<div class="ai1ec-row ai1ec-collapse" id="show_disclaimer">
+			<div class="well well-small">
+				{{ disclaimer | raw }}
+			</div>
+		</div>
+	{% endif %}
+
+	{# Event title. #}
+	<div class="ai1ec-form-group">
+		<div class="ai1ec-col-sm-12">
+			<input type="text" id="ai1ec-event-title" name="post_title"
+				placeholder="{{ 'Event Title' | e('html_attr') }}"
+				required="true" class="ai1ec-form-control">
+		</div>
+	</div>
+
+	<div class="ai1ec-form-group">
+		{# Start date & time. #}
+		<div class="ai1ec-col-sm-6">
+			<div class="ai1ec-form-group ai1ec-start-time">
+				<div class="ai1ec-col-xs-6">
+					<input data-date-format="{{ date_format_pattern | e('html_attr') }}"
+						data-date-weekstart="{{ week_start_day | e('html_attr') }}"
+						id="ai1ec-start-date-input" type="text"
+						required="true" readonly="readonly"
+						class="ai1ec-form-control ai1ec-datepicker"
+						placeholder="{{ 'Date' | __ | e('html_attr') }}">
+				</div>
+
+				<div class="ai1ec-col-xs-6">
+					<div id="ai1ec-start-time-input-wrap"
+						class="ai1ec-collapse bootstrap-timepicker">
+						<input id="ai1ec-start-time-input" type="text"
+							title="{{ timezone_expr | e('html_attr') }}"
+							data-show-meridian="{{ input_24h_time ? 'false' : 'true' }}"
+							readonly="readonly" disabled="disabled"
+							class="ai1ec-form-control ai1ec-timepicker ai1ec-tooltip-trigger"
+							placeholder="{{ 'Time' | __ | e('html_attr') }}">
+					</div>
+
+					{# Has time checkbox. #}
+					<label for="ai1ec-has-time" class="ai1ec-checkbox">
+						<input type="checkbox" id="ai1ec-has-time"
+							value="1" disabled="disabled" data-toggle="ai1ec-collapse"
+							data-target="#ai1ec-start-time-input-wrap">
+						{{ 'Add time' | __ }}
+					</label>
+				</div>
+			</div>
+		</div>
+
+		{# End date & time. #}
+		<div class="ai1ec-col-sm-6">
+			<div id="ai1ec-end-time-wrap" class="ai1ec-collapse ai1ec-row">
+				<div class="ai1ec-col-xs-6">
+					<input
+						data-date-format="{{ date_format_pattern | e('html_attr') }}"
+						data-date-weekstart="{{ week_start_day | e('html_attr') }}"
+						id="ai1ec-end-date-input" type="text"
+						readonly="readonly" disabled="disabled"
+						class="ai1ec-form-control ai1ec-datepicker"
+						placeholder="{{ 'End date' | __ | e('html_attr') }}">
+				</div>
+
+				<div class="ai1ec-col-xs-6">
+					<div id="ai1ec-end-time-input-wrap"
+						class="ai1ec-collapse bootstrap-timepicker">
+						<input id="ai1ec-end-time-input" type="text"
+							title="{{ timezone_expr | e('html_attr') }}"
+							data-show-meridian="{{ input_24h_time ? 'false' : 'true' }}"
+							data-alignment="right"
+							readonly="readonly" disabled="disabled"
+							class="ai1ec-form-control ai1ec-timepicker ai1ec-tooltip-trigger"
+							placeholder="{{ 'End time' | __ | e('html_attr') }}">
+					</div>
+				</div>
+			</div>
+
+			{# Has end time checkbox. #}
+			<label for="ai1ec-has-end-time" class="ai1ec-checkbox">
+				<input type="checkbox" id="ai1ec-has-end-time"
+					value="1" disabled="disabled" data-toggle="ai1ec-collapse"
+					data-target="#ai1ec-end-time-wrap">
+				<span class="ai1ec-without-time">
+					{{ 'Add end date' | __ }}
+				</span>
+				<span class="ai1ec-with-time">
+					{{ 'Add end date/time' | __ }}
+				</span>
+			</label>
+		</div>
+	</div>
+
+	{# Venue name. #}
+	<div class="ai1ec-form-group">
+		<div class="ai1ec-col-sm-12">
+			<input type="text" id="ai1ec_venue" name="ai1ec_venue"
+				{% if required_fields.is_venue_required %}
+					placeholder="{{ 'Venue name' | __ | e('html_attr') }}"
+					required="true"
+				{% else %}
+					placeholder="{{ 'Venue name (optional)' | __ | e('html_attr') }}"
+				{% endif %}
+				class="ai1ec-form-control">
+		</div>
+	</div>
+
+	{# Address & show map checkbox. #}
+	<div class="ai1ec-form-group">
+		<div class="ai1ec-col-sm-9">
+			<input type="text" id="ai1ec_address" name="ai1ec_address"
+				{% if required_fields.is_address_required %}
+						placeholder="{{ 'Address' | __ | e('html_attr') }}"
+						required="true"
+				{% else %}
+						placeholder="{{ 'Address (optional)' | __ | e('html_attr') }}"
+				{% endif %}
+				class="ai1ec-form-control">
+		</div>
+		<div class="ai1ec-col-sm-3">
+			<label for="ai1ec-google-map" class="ai1ec-checkbox">
+				<input type="checkbox" id="ai1ec-google-map" name="ai1ec_google_map"
+					{% if interactive_gmaps %}
+						data-toggle="ai1ec-collapse" data-target="#ai1ec-map-wrap"
+					{% endif %}
+					disabled="disabled">
+				{{ 'Include map' | __ }}
+			</label>
+		</div>
+	</div>
+
+	{# Map preview. #}
+	{% if interactive_gmaps %}
+		<div id="ai1ec-map-wrap" class="ai1ec-collapse">
+			<div id="ai1ec_map_canvas"></div>
+		</div>
+	{% endif %}
+
+	{# Categories & tags. #}
+	<div class="ai1ec-form-group">
+
+		{% if cat_select is not empty %}
+			<div class="ai1ec-col-sm-6">
+				{{ cat_select | raw }}
+			</div>
+			<div class="ai1ec-col-sm-6">
+				{{ tag_select | raw }}
+			</div>
+		{% else %}
+			<div class="ai1ec-col-sm-12">
+				{{ tag_select | raw }}
+			</div>
+		{% endif %}
+
+	</div>
+
+	{# Description. #}
+	<div class="ai1ec-form-group">
+		<div class="ai1ec-col-sm-12">
+			<textarea id="ai1ec-description" name="post_content" class="ai1ec-form-control" rows="4"
+				{% if required_fields.is_description_required %}
+					placeholder="{{ 'Description' | __ | e('html_attr') }}"
+					required="true"
+				{% else %}
+					placeholder="{{ 'Description (optional)' | __ | e('html_attr') }}"
+				{% endif %}
+				></textarea>
+		</div>
+	</div>
+
+	{# Event organizer name and email. #}
+	<div class="ai1ec-form-group">
+		<div class="ai1ec-col-sm-6">
+			<input type="text" id="ai1ec_contact_name" name="ai1ec_contact_name"
+			{% if required_fields.is_organizer_name_required %}
+				placeholder="{{ 'Organizer name' | __ | e('html_attr') }}"
+				required="true"
+			{% else %}
+				placeholder="{{ 'Organizer name (optional)' | __ | e('html_attr') }}"
+			{% endif %}
+				class="ai1ec-form-control">
+		</div>
+		<div class="ai1ec-col-sm-6">
+			<input type="text" id="ai1ec_contact_email" name="ai1ec_contact_email"
+				{% if required_fields.is_organizer_email_required %}
+					placeholder="{{ 'Organizer email' | __ | e('html_attr') }}"
+					required="true"
+				{% else %}
+					placeholder="{{ 'Organizer email (optional)' | __ | e('html_attr') }}"
+				{% endif %}
+				class="ai1ec-form-control">
+		</div>
+	</div>
+
+	{% if hide_additional_fields %}
+		<div class="ai1ec-form-group">
+			<div class="ai1ec-col-sm-12">
+				<label for="ai1ec-extra-checkbox" class="ai1ec-checkbox">
+					<input type="checkbox" id="ai1ec-extra-checkbox"
+						data-toggle="ai1ec-collapse" data-target="#ai1ec-extra-fields">
+					{{ 'Add additional details (cost, website URLs, etc.)' | __ }}
+				</label>
+			</div>
+		</div>
+	{% endif %}
+
+	<div id="ai1ec-extra-fields" class="{% if hide_additional_fields %}ai1ec-collapse{% endif %}">
+		{# Event cost and tickets URL. #}
+		<div class="ai1ec-form-group">
+			<div class="ai1ec-col-sm-4">
+				<div id="ai1ec_cost_wrap" class="ai1ec-collapse">
+					<input type="text" id="ai1ec_cost" name="ai1ec_cost"
+						placeholder="{{ 'Cost' | __ | e('html_attr') }}"
+						class="ai1ec-form-control">
+				</div>
+				<label for="ai1ec_is_free" class="ai1ec-checkbox">
+					<input type="checkbox"
+						checked="checked"
+						name="ai1ec_is_free"
+						data-toggle="ai1ec-collapse"
+						data-target="#ai1ec_cost_wrap"
+						id="ai1ec_is_free"
+						value="1">
+					{{ 'Free' | __ }}
+				</label>
+			</div>
+			<div class="ai1ec-col-sm-8">
+				<input type="text" id="ai1ec_ticket_url" name="ai1ec_ticket_url"
+					placeholder="{{ 'Registration URL (optional)' | __ | e('html_attr') }}"
+					class="ai1ec-form-control">
+			</div>
+		</div>
+
+		{# Event phone and contact URL. #}
+		<div class="ai1ec-form-group">
+			<div class="ai1ec-col-sm-4">
+				<input type="text" id="ai1ec_contact_phone" name="ai1ec_contact_phone"
+					{% if required_fields.is_phonenumber_required %}
+						placeholder="{{ 'Phone number' | __ | e('html_attr') }}"
+						required="true"
+					{% else %}
+						placeholder="{{ 'Phone number (optional)' | __ | e('html_attr') }}"
+					{% endif %}
+					class="ai1ec-form-control">
+			</div>
+			<div class="ai1ec-col-sm-8">
+				<input type="text" id="ai1ec_contact_url" name="ai1ec_contact_url"
+					{% if required_fields.is_contact_required %}
+						placeholder="{{ 'External website URL' | __ | e('html_attr') }}"
+						required="true"
+					{% else %}
+						placeholder="{{ 'External website URL (optional)' | __ | e('html_attr') }}"
+					{% endif %}
+					class="ai1ec-form-control">
+			</div>
+		</div>
+	</div>
+
+	{# Image upload. #}
+	{% if allow_uploads %}
+		<div class="ai1ec-form-group">
+			<div class="ai1ec-col-sm-3">
+				<label for="ai1ec-image" class="ai1ec-file-upload-label">
+					{{ 'Image (optional):' | __ }}
+				</label>
+			</div>
+			<div class="ai1ec-col-sm-9">
+				<div class="ai1ec-fileupload ai1ec-fileupload-new" data-provides="fileupload">
+					<div class="ai1ec-fileupload-new ai1ec-thumbnail">
+						<img src="{{ default_image | e('html_attr') }}">
+					</div>
+					<div class="ai1ec-fileupload-preview ai1ec-fileupload-exists ai1ec-thumbnail"></div>
+					<span class="ai1ec-btn ai1ec-btn-default ai1ec-btn-file">
+						<i class="ai1ec-fa ai1ec-fa-picture-o ai1ec-fa-fw"></i>
+						<span class="ai1ec-fileupload-new">
+							{{ 'Select image' | __ }}
+						</span>
+						<span class="ai1ec-fileupload-exists">
+							{{ 'Change' | __ }}
+						</span>
+						<input type="file" name="ai1ec_image">
+					</span>
+					<a href="#" class="ai1ec-btn ai1ec-btn-default ai1ec-text-danger ai1ec-fileupload-exists" data-dismiss="fileupload">
+						<i class="ai1ec-fa ai1ec-fa-times"></i>
+						{{ 'Remove' | __ }}
+					</a>
+				</div>
+			</div>
+		</div>
+	{% endif %}
+
+	{# reCAPTCHA. #}
+	{% if recaptcha_key %}
+		<div class="ai1ec-recaptcha"
+			data-placeholder="{{ 'Verification words' | __ | e('html_attr') }}"
+			data-recaptcha-key="{{ recaptcha_key | e('html_attr') }}">
+			<div class="ai1ec-initializing-message">
+				{{ 'Loading reCAPTCHA...' | __ }}
+			</div>
+		</div>
+	{% endif %}
+
+</div>
+
+<div class="ai1ec-modal-footer">
+	<a href="#" class="ai1ec-btn ai1ec-btn-lg ai1ec-btn-primary ai1ec-submit">
+		<i class="ai1ec-fa ai1ec-fa-upload ai1ec-fa-fw"></i>
+		{{ 'Submit Event' | __ }}
+		<i class="ai1ec-fa ai1ec-chevron-right"></i>
+	</a>
+</div>
+
+</form>

@@ -1,0 +1,978 @@
+<!doctype html>  
+<!--[if IE 6 ]><html lang="en-us" class="ie6"> <![endif]-->
+<!--[if IE 7 ]><html lang="en-us" class="ie7"> <![endif]-->
+<!--[if IE 8 ]><html lang="en-us" class="ie8"> <![endif]-->
+<!--[if (gt IE 7)|!(IE)]><!-->
+<html lang="en-us"><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	
+	<title>JackBox - Responsive Lightbox with Social Sharing</title>
+	
+	<meta name="description" content="Thank you for purchasing JackBox.  This document will help you get familiar with how you can use it for your projects.  
+
+Please read through all of the "JackBox Item Examples" as collectively they cover all of the custom settings available for any given item.">
+	<meta name="author" content="CodingJack">
+	<meta name="copyright" content="CodingJack">
+	<meta name="generator" content="Documenter v1.6 http://rxa.li/documenter">
+	<meta name="date" content="2012-09-19T00:00:00+02:00">
+	
+	<link rel="stylesheet" href="css/documenter_style.css" media="all">
+
+	<script src="js/jquery.1.6.4.js"></script>
+	<script src="js/cufon.js"></script><script src="js/Mako_400.font.js"></script>
+	<script src="js/jquery.scrollTo-1.4.2-min.js"></script>
+	<script src="js/jquery.easing.js"></script>
+	
+	<link rel="stylesheet" href="css/shDocumenter.css" media="screen">
+	<script src="js/shCore.js"></script>
+	<script src="js/shBrushCss.js"></script>
+	<script src="js/shBrushXml.js"></script>
+	<script src="js/shBrushJScript.js"></script>
+	<script src="js/shBrushPhp.js"></script>
+	<script>SyntaxHighlighter.defaults['toolbar'] = false;SyntaxHighlighter.all();</script>
+
+	<script>document.createElement('section');var duration=750,easing='swing';</script>
+	<script src="js/script.js"></script>
+	
+	<style>
+		html{background-color:#EEE;color:#383838;background-repeat:repeat;background-attachment:scroll;font-size: 14px}
+		::-moz-selection{background:#444444;color:#DDDDDD;}
+		::selection{background:#444444;color:#DDDDDD;}
+		#documenter_sidebar #documenter_logo{background-image:url(assets/images/logo.png);}
+		a{color:#0000FF;}
+		hr{border-top:1px solid #d5d5d5;border-bottom:1px solid #FFFFFF;}
+		#documenter_sidebar, #documenter_sidebar ol a{background-color:#DDDDDD;color:#222222;background-repeat:repeat;}
+		#documenter_sidebar ol a{-webkit-text-shadow:1px 1px 0px #EEEEEE;-moz-text-shadow:1px 1px 0px #EEEEEE;text-shadow:1px 1px 0px #EEEEEE;}
+		#documenter_sidebar ol{border-top:1px solid #AAAAAA;}
+		#documenter_sidebar ol a{border-top:1px solid #EEEEEE;border-bottom:1px solid #AAAAAA;color:#444444;}
+		#documenter_sidebar ol a:hover{background:#444444;color:#DDDDDD;border-top:1px solid #444444;}
+		#documenter_sidebar ol a.current{background:#444444;color:#DDDDDD;border-top:1px solid #444444;}
+		#documenter_copyright{display:block !important;visibility:visible !important;}
+		
+		section li {
+		
+			margin-bottom: 10px !important;
+			
+		}
+		
+		section ul.cjc li {
+		
+			margin-bottom: 0 !important;
+			
+		}
+		
+		a.cj {
+			
+			display: inline-block;
+			margin-bottom: 10px;
+			
+		}
+		
+		a.cj span {
+				
+			position: absolute;
+			width: 590px;
+			height: 300px;
+			display: block;
+			background: #000 url(assets/images/icon.png) no-repeat 515px 10px;
+			opacity: 0;
+			
+			-webkit-transition: opacity 0.5s ease-out;
+			-moz-transition: opacity 0.5s ease-out;
+			-o-transition: opacity 0.5s ease-out;
+			-ms-transition: opacity 0.5s ease-out;	
+			transition: opacity 0.5s ease-in-out;
+			
+		}
+		
+		a.fifty span {
+			
+			background-image: url(assets/images/icon_2.png);
+			
+		}
+		
+		a.cj span:hover {
+		
+			opacity: 0.75;
+			
+		}
+		
+		span.cj-highlight {
+		
+			font: 12px "Courier New", Courier, monospace;
+			display: inline-block;
+			padding: 1px 3px 1px 3px;
+			background-color: #d5d5d5;
+			border: 1px solid #b5b5b5;
+			box-sizing: border-box;
+			position: relative;
+			margin: 0 3px 0 3px;
+			top: -1px;
+			color: #000;
+			
+			-moz-border-radius: 2px;
+			-webkit-border-radius: 2px;
+			border-radius: 2px;
+
+		}
+		
+		.arrow {
+		
+			display: inline-block;
+			position: relative;
+			top: -2px;
+			
+		}
+		
+		h4 {
+		
+			margin-top: 40px !important;
+			
+		}
+		
+		.syntaxhighlighter {
+		
+			margin-bottom: 40px !important;
+			
+		}
+		
+		section p {
+		
+			line-height: 22px !important;
+			
+		}
+		
+		.cj-arrow {
+		
+			background-image: url(assets/images/arrow.png) !important;
+			background-repeat: no-repeat !important;
+			background-position: right 11px !important;
+			
+		}
+		
+		.cj-arrow:hover, .cj-arrow.current {
+		
+			background-image: url(assets/images/arrow_over.png) !important;
+			
+		}
+		
+	</style>
+	
+</head>
+<body>
+	<div id="documenter_sidebar">
+		<a href="http://codecanyon.net/user/CodingJack" target="_blank" id="documenter_logo"></a>
+		<ol id="documenter_nav">
+			<li><a class="current" href="#documenter_cover">Welcome</a></li>
+			<li><a href="#special_notes">Special Notes</a></li>
+			<li><a href="#global_settings">Global Settings</a></li>
+            <li><a href="#item-settings">Item Settings</a></li>
+			<li><a class="cj-arrow" href="#jackbox_examples">JackBox Examples</a>
+				<ol>
+					<li><a href="#jackbox_examples_custom_html_single_item_example">Custom HTML / Single Item Example</a>
+					<li><a href="#jackbox_examples_image_example">Image Example</a>
+					<li><a href="#jackbox_examples_vimeo_and_youtube">Vimeo and YouTube</a>
+					<li><a href="#jackbox_examples_local_video">Local Video</a>
+					<li><a href="#jackbox_examples_html5_audio_w_flash_fallback">HTML5 Audio w/ Flash Fallback</a>
+					<li><a href="#jackbox_examples_iframes_google_maps_flash_swf">iFrames / Google Maps / Flash SWF</a>
+				</ol>
+			</li>
+			<li><a href="#hidden_items">Adding Hidden Items</a></li>
+			<li><a href="#integrating_jackbox_with_your_webpage">Adding JackBox to a webpage</a></li>
+            
+            <li><a class="cj-arrow" href="#fonts_retina_responsive">Fonts, Retina, Responsive</a>
+            	
+                <ol>
+                	<li><a href="#fonts_retina_responsive_changing_the_google_font">Changing the Google Font</a></li>
+                	<li><a href="#fonts_retina_responsive_retina_graphics">Retina Graphics</a></li>
+                	<li><a href="#fonts_retina_responsive_responsive_css">Responsive CSS</a></li>
+                </ol>
+            </li>
+			<li><a href="#working_with_html5_video_and_audio">HTML5 Video and Audio</a></li>
+			<li><a href="#social_buttons">Social Buttons</a></li>
+			<li><a href="#under_the_hood">Under the Hood / API Methods</a></li>
+            
+            <li><a class="cj-arrow" href="#bonuses">Hovers and JackBox Bonuses</a>
+            	<ol>
+                	<li><a href="#bonuses_thumbnail_hovers">Thumbnail Hovers</a></li>
+					<li><a href="#bonuses_jackboxfx">JackBoxFX</a></li>
+                    <li><a href="#bonuses_standalone_video_player">Standalone Video Player</a></li>
+                </ol>
+            </li>
+			
+            <li><a href="#more_works">More works by CodingJack</a></li>
+
+		</ol>
+		<div id="documenter_copyright">Copyright CodingJack 2012<br>
+		made with the <a href="http://rxa.li/documenter" target="_blank">Documenter v1.6</a> 
+		</div>
+	</div>
+	<div id="documenter_content">
+	<section id="documenter_cover"><h1>JackBox</h1><h2>A Responsive Lightbox with Social Sharing</h2><hr><ul class="cjc"><li>Created: 09/19/2012</li><li>latest Update: 09/19/2012</li><li>By: CodingJack</li><li><a href="http://codecanyon.net/user/CodingJack" target="_blank">codecanyon.net/user/CodingJack</a></li></ul><p>Thank you for purchasing JackBox.  This document will help you get familiar with how you can use it in your projects.  
+
+<h3>Have a Question?  Search the item's discussion page:</h3><br />
+    
+<script>
+(function() {
+  var cx = '013170324715308408920:6ylgkfslqfk';
+  var gcse = document.createElement('script'); gcse.type = 'text/javascript';
+  gcse.async = true;
+  gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+      '//www.google.com/cse/cse.js?cx=' + cx;
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(gcse, s);
+})();
+</script>
+<gcse:search></gcse:search>
+
+<h3>Need this item customized?  <a href="mailto:support@codingjack.com">Contact CodingJack</a></h3><br />
+
+</section><section id="special_notes">
+	<h3>Special Notes</h3><hr class="notop">
+<ul>
+	<li>
+		<strong>Due to local security restrictions, some things will not work locally, especially in Chrome.&nbsp; But everything will work once the files have been updated to your website.  I recommend testing in Firefox as is more lenient toward local iframe security.  But the social buttons and gaussian blur hovers will only work online for all browsers.</strong></li>
+	<li>
+		Inside the download zip, you&#39;ll find two main folders. The first folder, named <span class="cj-highlight">deploy</span> is all you need to get started. This folder contains a single packed/minified version of all scripts.&nbsp; The css files in the deploy folder are also minified.&nbsp; If you wish to modify any of the scripts or CSS files, the original, unpacked/unminified versions can be found in the <span class="cj-highlight">source</span> folder.</li>
+	<li>
+		JackBox uses deep-linking (every item has its own unique url) by default.&nbsp; If your website already uses a deep-linking system, such as an Ajax-driven website, this feature will need to be turned off.&nbsp; Refer to <span class="cj-highlight">Global Settings</span> to toggle this feature.</li>
+	<li>
+		Autoplay for video and audio is not available on mobile due to device restrictions.</li>
+	<li>
+		Mobile touch swipe functionality is only available for images</li>
+	<li>
+		Fullscreen-mode is only supported in Chrome and Firefox.</li>
+        <li>In Chrome, when local HTML5 video is played, lightbox fullscreen mode is not supported.  However, the HTML5 video player will have its own fullscreen button in Chrome.  If having both functionalities is important, use the Flash version of the video player which has a mobile fallback.</li>  
+</ul>
+</section>
+<section id="global_settings">
+	<h3>Global Settings</h3><hr class="notop">
+<p>
+	JackBox only needs one line of code to get started:</p>
+<pre class="brush: js">
+jQuery(&quot;.jackbox[data-group]&quot;).jackBox(&quot;init&quot;);
+</pre>
+<p>
+	But you can also override the default settings by passing a second argument into the <span class="cj-highlight">jackBox()</span> method.&nbsp; This is demonstrated below where the individual settings are described:</p>
+<pre class="brush: js">
+jQuery(&quot;.jackbox[data-group]&quot;).jackBox(&quot;init&quot;, {
+
+    deepLinking: true,              // choose to use the deep-linking feature (&quot;true&quot; will enhance social sharing!) true/false
+    showInfoByDefault: false,       // show item info automatically when content loads, true/false
+    preloadGraphics: true,          // preload the jackbox graphics for a faster jackbox
+    fullscreenScalesContent: true,  // choose to always scale content up in fullscreen mode, true/false
+    defaultShareImage: &quot;1.jpg&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// if the social widget can&#39;t find an image to share from your lightbox content,
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// it will use this image&#39;s url instead.  Only applicable to Pinterest.
+
+    autoPlayVideo: false,           // video autoplay default, this can also be set per video in the data-attributes, true/false
+    flashVideoFirst: false,         // choose which technology has first priority for video, HTML5 or Flash, true/false
+    defaultVideoWidth: 960,         // the default video width, can also be set per video in the data-attributes
+    defaultVideoHeight: 540,        // the default video width, can also be set per video in the data-attributes
+    
+    useThumbs: true,                // choose to use thumbnails, true/false
+    thumbsStartHidden: false,       // choose to initially hide the thumbnail strip, true/false
+    thumbnailWidth: 75,             // the default video width, can also be set per video in the data-attributes
+    thumbnailHeight: 50,            // the default video height, can also be set per video in the data-attributes
+	useThumbTooltips: true,         // choose to use small thumbnail tooltips, true/false
+    showPageScrollbar: false,       // if you don't like the "page jump" when the scrollbar disappears, set this to "true"
+	useKeyboardControls: true			&nbsp;// The left and right keyboard arrows will cycle through the items.  up/down will toggle thumbs
+    
+});
+
+</pre>
+<p>&nbsp;
+	</p>
+</section>
+
+<section id="item-settings"><h3>Item Settings</h3><hr class="notop">
+
+<pre class="html">data-group              = The group/category, this is mandatory even for a single item
+data-thumbnail          = Optional thumbnail to be used, original thumbnail will be used if this attribute is ommited.  
+                          If tag is ommited and no original thumbnail exists either, if the item&#39;s JackBox content is an image,
+                          the large version of the image will be used and scaled.
+                          If none of these options are available, the &quot;default thumbnail&quot; jpg will be used.
+data-title              = Optional item title, accepts text of html
+data-thumbTooltip       = Optional attribute if you want to specify a thumbnail tooltip.  Otherwise the data-title will be used if available.
+data-description        = Optional description, enter the id of the element where JackBox should grab the html/text from
+data-scaleUp            = JackBox will always scale images down if necessary. Setting this attribute to true will scale the content up as well
+data-width              = Override the default width (only applicable when content is not an image)
+data-height             = Override the default height (only applicable when content is not an image)
+data-flashHasPriority   = Applies to local video player, true = Flash w/ mobile backup, false = HTML5 with Flash backup
+data-firefoxUsesFlash   = Set this to true if you wish to use the HTML player w/ Flash fallback but want Firefox to use Flash no matter what
+                          This is useful when you want to use the HTML5 version of the player but don't want to create a webm fallback for Firefox
+data-poster             = Applies to local video, will be shown for mobile devices that don&#39;t support autoplay (when we can&#39;t grab the first frame of the video)
+data-autoplay           = Applies to video and audio
+data-audiotitle         = The audio player song title
+href/data-href          = the content to be loaded inside JackBox
+</pre>
+<p>&nbsp;
+	</p>
+
+</section>
+
+<section id="jackbox_examples">
+	<h3>JackBox Examples</h3><hr class="notop">
+<h4 id="jackbox_examples_custom_html_single_item_example">Custom HTML / Single Item Example</h4>
+<p>
+	Although JackBox supports grouping/categories, you may just want to have a single item appear in the lightbox.&nbsp; Here is an example:</p>
+<pre class="brush: html">
+&lt;a class=&quot;jackbox&quot; data-group=&quot;info&quot; data-title=&quot;JackBox Just Works&quot; data-width=&quot;640&quot; href=&quot;#learn-more&quot;&gt;Learn More&lt;/a&gt;
+</pre>
+<p>
+	The above example is just a text link that loads an html div.&nbsp; Even though we&#39;re just loading a single item, a <span class="cj-highlight">data-group</span> is still required.&nbsp; This allows for the creation keyword enhanced urls.<br />For the above example, the following would be the url based on the <span class="cj-highlight">data-group</span> attribute:</p>
+<p>
+	<i><strong>www.yoursite.com#/info/</strong></i></p>
+<p>
+	The <span class="cj-highlight">data-title</span> is optional.&nbsp; Below is a screenshot of the <span class="cj-highlight">data-title</span></p>
+<p>
+	<img alt="" src="assets/images/image_4.jpg" style="width: 721px; height: 157px;"></p>
+<p>
+	<span class="cj-highlight">data-width</span> is optional.&nbsp; But because the default width for video, iframes and html content is 960, we can override that number by including the <span class="cj-highlight">data-width</span> attribute.</p>
+<p>
+	And finally, the <span class="cj-highlight">href</span> tag links to the id of the html div we wish to display for this example.&nbsp; Because this JackBox item is a link in nature, we&#39;ll use the <span class="cj-highlight">href</span> attribute.&nbsp; but a JackBox item doesn&#39;t need to be a link.&nbsp; It can be any tag, and in those cases, instead of using the <span class="cj-highlight">href</span> attribute, a <span class="cj-highlight">data-href</span> attribute would be used instead.</p>
+<h4 id="jackbox_examples_image_example">Image Example</h4>
+<p>
+	The following is a simple example of loading an image inside JackBox.&nbsp;</p>
+<pre class="brush: html">
+&lt;a class=&quot;jackbox&quot;
+
+&nbsp;&nbsp;&nbsp; data-group=&quot;images&quot;
+&nbsp;&nbsp;&nbsp; data-thumbnail=&quot;jackbox/img/thumbs/1a.jpg&quot;
+&nbsp;&nbsp;&nbsp; data-title=&quot;Image Title with &lt;a href=&#39;http://www.google.com&#39; target=_blank&#39;&gt;link&lt;/a&gt;&quot;
+&nbsp;&nbsp;&nbsp; data-description=&quot;#description_1&quot;
+&nbsp;&nbsp;&nbsp; href=&quot;jackbox/img/photos/1.jpg&quot;
+&nbsp;&nbsp; &nbsp;
+&gt;&lt;!-- end opening tag --&gt;
+
+&nbsp;&nbsp;&nbsp; &lt;!-- original thumbnail --&gt;
+&nbsp;&nbsp;&nbsp; &lt;img src=&quot;jackbox/img/thumbs/1.jpg&quot; width=&quot;180&quot; height=&quot;150&quot; alt=&quot;responsive lightbox&quot; /&gt;
+&nbsp;&nbsp; &nbsp;
+&lt;/a&gt;
+</pre>
+
+<p>
+	The <span class="cj-highlight">data-thumbnail</span> attribute is an optional attribute that can be added to force JackBox to use a specific thumbnail url when JackBox is in &quot;gallery mode&quot; (i.e. when there are multiple items inside a <span class="cj-highlight">data-group</span>).&nbsp; But a seperate, custom thumbnail is NOT required.&nbsp; Instead, if the element on your page that triggers the lightbox is a thumbnail to begin with, JackBox can simply use that thumbnail instead (screenshot below)</p>
+<p>
+	<img alt="" src="assets/images/image_5.jpg" style="width: 371px; height: 348px;"></p>
+<p>
+	<strong>Would then be resized and used here:</strong></p>
+<p>
+	<img alt="" src="assets/images/image_3.jpg" style="width: 232px; height: 139px;"></p>
+<p>
+	But what if the JackBox item is a simple link, like shown in the <span class="cj-highlight">Custom HTML</span> section?&nbsp; In these cases, JackBox will then see if the lightbox content to be displayed is an image.&nbsp; If so, it will then resize and use that image as the thumbnail.&nbsp; And finally, if a large image is not available, JackBox will then use the <span class="cj-highlight">default thumbnail</span> which is located inside the <span class="cj-highlight">jackbox/img/thumbs</span> folder and is named <span class="cj-highlight">default.jpg</span>.<br /><br /></p>
+<p>
+	The <span class="cj-highlight">data-description</span> attribute is the id of the html div you wish to use as your item&#39;s description.&nbsp; This div can be placed anywhere inside your web page, as it will be hidden from view automatically.&nbsp;</p>
+<pre class="brush: html">
+&lt;div class=&quot;jackbox-description&quot; id=&quot;description_1&quot;&gt;
+
+    &lt;h3&gt;Description Title&lt;/h3&gt;
+    
+    &lt;a href=&quot;#&quot;&gt;Link&lt;/a&gt; ipsum dolor sit amet, consectetur adipiscing elit. In est metus, tincidunt vitae eleifend sit amet, porta a sapien. Fusce in dolor nec purus facilisis dictum. tincidunt sed quam.
+    
+&lt;/div&gt;
+</pre>
+<p>
+	The contents of the div will them be used as the item&#39;s description (screenshot below)</p>
+<p>
+	<img alt="" src="assets/images/image_1.jpg" style="width: 502px; height: 247px;"></p>
+<h4 id="jackbox_examples_vimeo_and_youtube">Vimeo and YouTube</h4>
+<p>
+	JackBox makes working with Vimeo and YouTube easy.&nbsp; First, a small thumbnail is not needed, as JackBox will go ahead and load the video&#39;s thumbnail directly from Vimeo.com and YouTube.com.&nbsp; Second, all you need to do to load a Vimeo or YouTube video is to go to that video&#39;s homepage and copy the link directly from the browser&#39;s address bar:</p>
+<p>
+	<img alt="" src="assets/images/image_2.jpg" style="width: 606px; height: 342px;"></p>
+<p>
+	To autoplay videos, use the special <span class="cj-highlight">data-autoplay</span> attribute.&nbsp; Or you can set autoplay as the default behaviour inside the Global Settings.</p>
+<h4 id="jackbox_examples_local_video">Local Video</h4>
+<p>
+	There are a few custom modules that JackBox uses.&nbsp; Local video is one of them.&nbsp; Here is a local video taken directly from one of the included html files:</p>
+<pre class="brush: html">
+&lt;a class=&quot;jackbox&quot;
+
+    data-group=&quot;video&quot;
+    data-thumbnail=&quot;jackbox/img/thumbs/7a.jpg&quot;
+    data-title=&quot;HTML5 Video w/ Flash Backup&quot;
+    data-description=&quot;#description_1&quot;
+    data-flashHasPriority=&quot;false&quot;
+    data-autoplay=&quot;true&quot;
+    data-width=&quot;958&quot;
+    data-height=&quot;538&quot;
+    data-poster=&quot;jackbox/img/video_poster.jpg&quot;
+    href=&quot;jackbox/video/1.mp4&quot;
+    
+&gt;&lt;!-- end opening tag --&gt;
+
+    &lt;img src=&quot;jackbox/img/thumbs/7.jpg&quot; width=&quot;180&quot; height=&quot;150&quot; alt=&quot;responsive lightbox&quot; /&gt;
+    
+&lt;/a&gt;
+</pre>
+<p>
+	<span class="cj-highlight">data-flashHasPriority</span> is one of the cool features about JackBox local video.&nbsp; The video player doubles as an HTML5 player AND a Flash Player.&nbsp; Both are needed to make sure your video can be accessed from all devices/browsers.&nbsp; For example, IE8 doesn&#39;t support HTML5 so we&#39;ll always use the Flash version for that.&nbsp; And iPad/iPhone&#39;s don&#39;t support Flash, so the HTML5 version will always be used for those devices.&nbsp;</p>
+<p>
+	But for browsers that support both, such as Firefox and Chrome, you have the ability to choose which version of the player should have priority in these cases.&nbsp; If you&#39;d like HTML5 to have priority, set this attribute to <span class="cj-highlight">false</span>.&nbsp; Or if you&#39;d like Flash to have priority, set this attribute to <span class="cj-highlight">true</span>.</p>
+<p>
+	<span class="cj-highlight">data-autoplay</span> is an optional attribute that will allow you to turn on autoplay per video.&nbsp; If all of you videos will either autoplay or not autoplay, use the global autoplay setting instead (see <span class="cj-highlight">Global Settings</span>).</p>
+<p>
+	<span class="cj-highlight">data-poster</span> is a special attribute only used for local video.&nbsp; The HTML5 player will always just grab the first frame of the video and use that as the poster.&nbsp; But because iPhones/iPads don&#39;t support autoplay, we can&#39;t grab the first frame of the video.&nbsp; And in these cases, the <span class="cj-highlight">data-poster</span> will be displayed instead.&nbsp;</p>
+<p>
+	Why is the first frame of the video used instead of the <span class="cj-highlight">data-poster</span> when autoplay is supported?&nbsp; Because starting and stopping the video on the first frame allows us to begin the loading process.&nbsp; This allows us to begin preloading the video immediately leading to less interrupted playback.&nbsp; But because the video has technically played, HTML5 technology will subsequently hide the poster by default.&nbsp;</p>
+<h4 id="jackbox_examples_html5_audio_w_flash_fallback">HTML5 Audio w/ Flash Fallback</h4>
+<pre class="brush: html">
+&lt;a class=&quot;jackbox&quot;
+
+    data-group=&quot;audio&quot;
+    data-title=&quot;HTML5 Audio w/ Flash Backup&quot;
+    data-description=&quot;#description_1&quot;
+    data-width=&quot;500&quot;
+    data-height=&quot;185&quot;
+    data-autoplay=&quot;true&quot;
+    data-audiotitle=&quot;&lt;a href=&#39;http://audiojungle.net/item/one-fine-day/109769&#39; target=&#39;_blank&#39;&gt;Symphony-of-Specters - One Fine Day...&lt;/a&gt;&quot;
+    href=&quot;jackbox/music/1.mp3&quot;
+    
+&gt;&lt;!-- end opening tag --&gt;
+    
+    &lt;img src=&quot;jackbox/img/thumbs/3.jpg&quot; width=&quot;180&quot; height=&quot;150&quot; alt=&quot;responsive lightbox&quot; /&gt;
+    
+&lt;/a&gt;
+</pre>
+<p>
+	<span class="cj-highlight">data-width</span> and <span class="cj-highlight">data-height</span> are important attributes for the Audio module.&nbsp; This is because the Audio module has its own background image.&nbsp; To change this, open the file named <span class="cj-highlight">jackbox/css/jackbox-audio.css</span>, and at the very top you&#39;ll see the following code where the 500x185 background image is declared.&nbsp; If you choose to change the <span class="cj-highlight">data-width</span> and <span class="cj-highlight">data-height</span>, be sure to change this background image as well.</p>
+<pre class="brush: css">
+body {
+
+    background: #000 url(../img/audio_poster.jpg);
+    
+}
+</pre>
+<p>
+	The Audio module also uses Google Fonts.&nbsp; Refer to <span class="cj-highlight">Changing the Google Font</span> for an example of how to change this.&nbsp; If you choose to change this font, the files that need to be edited are <span class="cj-highlight">jackbox/modules/jackbox_audio.html</span> and <span class="cj-highlight">jackbox/css/jackbox-audio.css</span>.</p>
+<p>
+	<span class="cj-highlight">data-audiotitle</span> is a special attribute used only by the Audio module.&nbsp; This attribute accepts plain text or hyperlinks.&nbsp; The example above hyprlinks the text.</p>
+<p>
+	Just like the video examples, the Audio module also supports the <span class="cj-highlight">autoplay</span> attribute.</p>
+<h4 id="jackbox_examples_iframes_google_maps_flash_swf">iFrames / Google Maps / Flash SWF</h4>
+<pre class="brush: html">
+JackBox can load any web page as an iframe:
+
+&lt;a class=&quot;jackbox&quot;
+
+    data-thumbnail=&quot;jackbox/img/thumbs/num2.jpg&quot;
+    data-group=&quot;html&quot;
+    data-title=&quot;iFrame&quot;
+    data-width=&quot;1100&quot;
+    data-description=&quot;#description_1&quot;
+    href=&quot;http://codecanyon.net/user/CodingJack&quot;
+    
+&gt;&lt;!-- end opening tag --&gt;
+
+    &lt;!-- thumbnail --&gt;
+    &lt;img src=&quot;jackbox/img/thumbs/1.jpg&quot; width=&quot;180&quot; height=&quot;150&quot; alt=&quot;responsive lightbox&quot; /&gt;
+
+&lt;/a&gt;
+</pre>
+<p>
+	The iFrame example above is ver similar to the other JackBox examples.&nbsp; The only difference is that a webpage&#39;s url is used as the <span class="cj-highlight">href</span> or <span class="cj-highlight">data-href</span> attribute.&nbsp;</p>
+<p>
+	The iFrame method is also used for Google Maps.&nbsp; Below is a short video demonstrating how to get a Google Maps iFrame url.</p>
+<p>
+	<iframe width="640" height="360" src="http://www.youtube.com/embed/0F2lawcKs50" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe><br /><br /></p>
+<h5>
+	To load a Flash SWF, just enter the url to the swf as the <span class="cj-highlight">href</span> or the <span class="cj-highlight">data-href</span>.</h5>
+<p>&nbsp;
+	</p>
+</section>
+<section id="hidden_items">
+	<h3>Hidden Items</h3><hr class="notop">
+<p>
+	Similar to other lightboxes, JackBox allows you to create groups/categories of items.&nbsp; This can be done two ways:</p>
+<ol>
+	<li>
+		Use the same <span class="cj-highlight">data-group</span> for all the items on your page.&nbsp; This is usually used for gallery-type pages where all images belong to the same category.</li>
+	<li>
+		Create a list of <span class="cj-highlight">hidden</span> items that will only be shown when a particular item is selected.&nbsp; This is useful for portfolio-type pages where you&#39;d like to show additional images of a project.</li>
+</ol>
+<p>
+	To create a list of hidden items, simply create and paste an unordered list below your JackBox item.&nbsp; Here&#39;s an example:</p>
+<pre class="brush: html">
+&lt;a class=&quot;jackbox&quot; data-group=&quot;vimeo&quot; data-title=&quot;Surrealist Dollhouse&quot; data-description=&quot;#description_1&quot; href=&quot;http://vimeo.com/17573879&quot;&gt;
+    
+    &lt;img src=&quot;jackbox/img/thumbs/8.jpg&quot; width=&quot;180&quot; height=&quot;150&quot; alt=&quot;responsive lightbox&quot; /&gt;
+
+&lt;/a&gt;
+ 
+&lt;ul class=&quot;jackbox-hidden-items&quot;&gt;
+    
+    &lt;li class=&quot;jackbox&quot; data-group=&quot;vimeo&quot; data-title=&quot;Kilogramme&quot; data-description=&quot;#description_1&quot; data-href=&quot;http://vimeo.com/17516687&quot;&gt;&lt;/li&gt;
+    &lt;li class=&quot;jackbox&quot; data-group=&quot;vimeo&quot; data-title=&quot;Dreamland Sender&quot; data-description=&quot;#description_1&quot; data-href=&quot;http://vimeo.com/17586987&quot;&gt;&lt;/li&gt;
+    &lt;li class=&quot;jackbox&quot; data-group=&quot;vimeo&quot; data-title=&quot;Google eBooks&quot; data-description=&quot;#description_1&quot; data-href=&quot;http://vimeo.com/17574435&quot;&gt;&lt;/li&gt;
+    &lt;li class=&quot;jackbox&quot; data-group=&quot;vimeo&quot; data-title=&quot;Henning Sandstr&ouml;m&quot; data-description=&quot;#description_1&quot; data-href=&quot;http://vimeo.com/35416846&quot;&gt;&lt;/li&gt;
+    &lt;li class=&quot;jackbox&quot; data-group=&quot;vimeo&quot; data-title=&quot;Nightscapes&quot; data-description=&quot;#description_1&quot; data-href=&quot;http://vimeo.com/35406208&quot;&gt;&lt;/li&gt;
+    &lt;li class=&quot;jackbox&quot; data-group=&quot;vimeo&quot; data-title=&quot;Nothing To Fear&quot; data-description=&quot;#description_1&quot; data-href=&quot;http://vimeo.com/17593192&quot;&gt;&lt;/li&gt;
+    &lt;li class=&quot;jackbox&quot; data-group=&quot;vimeo&quot; data-title=&quot;Refraction&quot; data-description=&quot;#description_1&quot; data-href=&quot;http://vimeo.com/16980912&quot;&gt;&lt;/li&gt;
+    &lt;li class=&quot;jackbox&quot; data-group=&quot;vimeo&quot; data-title=&quot;MaxDreamCreator&quot; data-description=&quot;#description_1&quot; data-href=&quot;http://vimeo.com/35454524&quot;&gt;&lt;/li&gt;
+    &lt;li class=&quot;jackbox&quot; data-group=&quot;vimeo&quot; data-title=&quot;Leif Enger&quot; data-description=&quot;#description_1&quot; data-href=&quot;http://vimeo.com/35427418&quot;&gt;&lt;/li&gt;
+
+&lt;/ul&gt;
+</pre>
+<p>
+	In the example above, the first part (the hyperlink) represents the thumbnail that will be visibly present on your web page.&nbsp; This is what the user would click to activate the lightbox.&nbsp;</p>
+<p>
+	The second part represents the hidden items that will ONLY appear inside the lightbox once activated.&nbsp; Technically this unordered list can exist anywhere on your web page, as the unordered list itself will be hidden by default.&nbsp;</p>
+<p>
+	Because a JackBox item can be any tag, we can organize the hidden items as list items.&nbsp; As you can see, all of the data-attributes are the same, with the only exception being that the list items use the <span class="cj-highlight">data-href</span> attribute instead of the <span class="cj-highlight">href</span> attribute.&nbsp;</p>
+<p>
+	All of the items in the example above are automatically grouped together in the lightbox by having the same <span class="cj-highlight">data-group</span>.</p>
+</section>
+<section id="integrating_jackbox_with_your_webpage">
+	<h3>Adding JackBox to your webpage</h3><hr class="notop">
+<p>
+	First, open any of the html files inside the <span class="cj-highlight">deploy</span> folder, copy the code below and paste it between the <span class="cj-highlight">head</span> of your web document:</p>
+<pre class="brush: html">
+
+&lt;meta name=&quot;viewport&quot; id=&quot;view&quot; content=&quot;width=device-width minimum-scale=1, maximum-scale=1&quot; /&gt;
+
+&lt;link href=&#39;http://fonts.googleapis.com/css?family=&#39;Mako&#39; rel=&#39;stylesheet&#39; type=&#39;text/css&#39;&gt;
+&lt;link href=&quot;jackbox/css/jackbox-packed.min.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot; /&gt;
+
+&lt;!--[if lt IE 9]&gt;
+    &lt;link href=&quot;jackbox/css/jackbox-ie8.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot; /&gt;
+    &lt;script src=&quot;//html5shiv.googlecode.com/svn/trunk/html5.js&quot;&gt;&lt;/script&gt;
+&lt;![endif]--&gt;
+
+&lt;!--[if gt IE 8]&gt;&lt;link href=&quot;jackbox/css/jackbox-ie9.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot; /&gt;&lt;![endif]--&gt;
+
+</pre>
+<p>
+	Next copy and paste the scripts as well:</p>
+<pre class="brush: html">
+&lt;script type=&quot;text/javascript&quot; src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;jackbox/js/jackbox-packed.min.js&quot;&gt;&lt;/script&gt;
+
+&lt;script type=&quot;text/javascript&quot;&gt;
+
+    jQuery(document).ready(function() {
+       
+        jQuery(&quot;.jackbox[data-group]&quot;).jackBox(&quot;init&quot;);
+
+    });
+
+&lt;/script&gt;
+</pre>
+<p>
+	<i>JackBox runs on jQuery 1.8.1.&nbsp; A webpage should only load one instance of jQuery.&nbsp; Loading more than one instance of the jQuery library can cause conflicts.</i></p>
+</section>
+<section id="fonts_retina_responsive">
+	<h4 id="fonts_retina_responsive_changing_the_google_font">Changing the Google Font</h4>
+<p>
+	JackBox uses Google Fonts.&nbsp; Below is a short video showing how the Google Font can be changed:</p>
+<p>
+	<iframe width="640" height="360" src="http://www.youtube.com/embed/RcO5s8wiFSo" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></p>
+
+<h4 id="fonts_retina_responsive_retina_graphics">Retina Graphics</h4>
+<p>
+	Some of the graphics used in JackBox are CSS based, and in these cases, they&#39;re &quot;retina-ready&quot; by default.&nbsp; But most of the buttons/icons used in the lightbox are png images.&nbsp;</p>
+<p>
+	Here&#39;s a good article that talks about &quot;retina&quot; and how it applies to us webmasters:</p>
+<p>
+	<a href="http://coding.smashingmagazine.com/2012/08/20/towards-retina-web/" target="_blank">http://coding.smashingmagazine.com/2012/08/20/towards-retina-web/</a></p>
+<p>
+	The summary is that all &quot;retina-ready&quot; graphics/icons need to be double in size.&nbsp; In the download source, open the <span class="cj-highlight">jackbox/img/retina</span> folder for an example.&nbsp; With this special folder, all icons have two versions:&nbsp; one double the size, and one regular size.&nbsp; And CSS media queries are used to determinne which version of the icon should be displayed.&nbsp;</p>
+<p>
+	Open the file <span class="cj-highlight">jackbox/css/jackbox.css</span> and scroll to the bottom.&nbsp; Here you&#39;ll find the following media query:</p>
+<pre class="brush: css">
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min--moz-device-pixel-ratio: 2),
+only screen and (-o-min-device-pixel-ratio: 2/1),
+only screen and (min-device-pixel-ratio: 2),
+only screen and (min-resolution: 192dpi),
+only screen and (min-resolution: 2dppx) {
+</pre>
+<p>
+	Everything inside that query is what will be used for screens that are &quot;retina-display&quot;.&nbsp; You&#39;ll also find retina media queries at the bottom of the files <span class="cj-highlight">jackbox/css/jackbox-video.css</span> and <span class="cj-highlight">jackbox/css/jackbox_hovers.css</span> files.&nbsp;</p>
+<p>
+	<i>The audio module is 100% CSS and is retina-ready by default.</i></p>
+
+<h4 id="fonts_retina_responsive_responsive_css">Responsive CSS</h4>
+<p>
+	Inside the CSS files toward the bottom you&#39;ll find media queries for smartphones.&nbsp; Here&#39;s an example:</p>
+<pre class="brush: css">
+@media screen and (max-width: 600px) {
+    
+    .jackbox-panel,
+    .jackbox-thumb-holder {
+       
+        display: none !important;
+       
+    }
+    
+    .jackbox-show-thumbs,
+    .jackbox-hide-thumbs {
+    
+        width: 0;
+        margin-left: 0;
+        overflow: hidden;
+       
+    }
+    
+}
+</pre>
+<p>
+	This example pertains to a smartphone-landscape screen.&nbsp; And in this example, the large prev/next buttons that are normally shown on the left and right side of the screen are hidden as well as the lightbox thumbnails.&nbsp; This leaves the necessary room needed for the actual content to display properly on small screens.</p>
+</section>
+<section id="working_with_html5_video_and_audio">
+	<h3>Working with HTML5 Video and Audio</h3><hr class="notop">
+<p>
+	JackBox supports HTML5 Audio and Video.&nbsp; The default file type for video is <span class="cj-highlight">mp4</span> and the default for audio is <span class="cj-highlight">mp3</span>.&nbsp;</p>
+<p>
+	Firefox, in particular, does not support mp3 or mp4.&nbsp; Because of this, alternative file-types need to be created.&nbsp; For video, JackBox is designed to fall back to the <span class="cj-highlight">webm</span> file-type when <span class="cj-highlight">mp4</span> is not supported. For audio, JackBox will fall back to the <span class="cj-highlight">ogg</span> file-type when <span class="cj-highlight">mp3</span> is not supported.&nbsp;</p>
+<p>
+	Because of this, every audio and video file must have two versions:</p>
+<ul>
+	<li>
+		The default (&quot;mp3&quot; for audio, &quot;mp4&quot; for video)</li>
+	<li>
+		The fallback (&quot;ogg&quot; for audio, &quot;webm&quot; for video)</li>
+</ul>
+<p>
+	If you look inside the <span class="cj-highlight">music</span> and <span class="cj-highlight">video</span> folders, you&#39;ll see that each item has both a default and a fallback version.&nbsp; For the fallback to work properly, the media item&#39;s name must be identical for each version.&nbsp; Only the file&#39;s extention should be different.&nbsp; Here&#39;s an example:</p>
+<ul>
+	<li>
+		song.mp3</li>
+	<li>
+		song.ogg</li>
+</ul>
+<p>
+	When editing the html files, always use the default file-types (mp3, mp4) for the media urls. JackBox will then dynamically replace the mp3 or mp4 versions with the ogg or webm fallbacks when neeeded.&nbsp;</p>
+<p>
+	To create the ogg and webm versions of your media, I recommend the following tools:</p>
+<ul>
+	<li>
+		<a href="http://media.io/" target="_blank">http://media.io/</a> (mp3 &gt; ogg conversion)</li>
+	<li>
+		<a href="http://www.mirovideoconverter.com/" target="_blank">http://www.mirovideoconverter.com/</a> (mp4 &gt; webm conversion)</li>
+</ul>
+<p>
+	<i>The traditional "flv" video file type&#39;s are not needed even for the Flash fallback.&nbsp; This is because the Flash fallback can play the "mp4" file-type.</i></p>
+<p>
+	You may find that the audio and video works locally in Firefox but not online.&nbsp; If you experience this, it likely means that your server has not updated to support the latest HTML5 media extentions.&nbsp; But you can manually update your server.&nbsp; Here&#39;s how:</p>
+<ol>
+	<li>
+		Download the <span class="cj-highlight">.htaccess</span> file from the root directory of your server.&nbsp; If one does not exist, create a new text file on your computer and name it <span class="cj-highlight">htaccess.txt</span>.</li>
+	<li>
+		If you were able to find the .htaccess file on your server, rename it to &quot;htaccess.txt&quot;.&nbsp; Your computer may alert you about changing the file&#39;s extention.&nbsp; Just click &quot;ok&quot; if you get this message.</li>
+	<li>
+		Next, open <span class="cj-highlight">htaccess.txt</span> in your favorite text editor, and add the following to the bottom of the file:<br>
+		<br>
+		<strong>AddType audio/ogg .ogg<br>
+		AddType video/webm .webm</strong><br>
+		&nbsp;</li>
+	<li>
+		Next, save the file, and upload it to the root directory of your server.&nbsp; Then delete the previous <span class="cj-highlight">.htaccess</span> file from your server, and rename the <span class="cj-highlight">htaccess.txt</span> file you just uploaded to <span class="cj-highlight">.htaccess</span>.</li>
+</ol>
+</section>
+<section id="social_buttons">
+	<h3>Social Buttons</h3><hr class="notop">
+<p>
+	JackBox uses a php file to load in the social buttons.&nbsp; This file can be found inside the <span class="cj-highlight">modules</span> folder and is named <span class="cj-highlight">jackbox_social.php</span>.&nbsp; Inside this file at the very top, you&#39;ll see the following options:</p>
+<pre class="brush: php">
+$useTwitter = true;
+$useGoogle = true;
+$usePinterest = true;
+$useFacebook = true;
+</pre>
+
+<p>
+	If you do not wish to use the social buttons at all, open <span class="cj-highlight">source/jackbox/js/jackbox.js</span> and scroll down to where you see the following code:</p>
+<pre class="brush: js">
+// The markup or &quot;header&quot; that will be placed above the item&#39;s content
+topMarkup =
+    
+    &#39;&lt;div class=&quot;jackbox-top clearfix&quot;&gt;&#39; +
+       
+        /* ******************************************** */
+        /* delete this line below for no social buttons */
+        /* ******************************************** */
+        &#39;&lt;div class=&quot;jackbox-social&quot;&gt;&lt;/div&gt;&#39; +
+       
+        // close button
+        &#39;&lt;div class=&quot;jackbox-top-icons&quot;&gt;&#39; +
+           
+            &#39;&lt;span class=&quot;jackbox-fullscreen&quot;&gt;&lt;span class=&quot;jackbox-button jackbox-fs&quot;&gt;&lt;/span&gt;&lt;span class=&quot;jackbox-button jackbox-ns&quot;&gt;&lt;/span&gt;&lt;/span&gt;&#39; +
+            &#39;&lt;span class=&quot;jackbox-button jackbox-button-margin jackbox-close&quot;&gt;&lt;/span&gt;&#39; +
+           
+        &#39;&lt;/div&gt;&#39; +
+                   
+    &#39;&lt;div /&gt;&#39;,
+</pre>
+<p>&nbsp;
+	</p>
+</section>
+<section id="under_the_hood">
+	<h3>Under the Hood / API Methods</h3><hr class="notop">
+<p>
+	Most things can be changed by the methods discussed throughout this help document.&nbsp; But some settings are declared inside JackBox&#39;s core script.&nbsp; To view them, open the file <span class="cj-highlight">jackbox/js/jackbox.js</span> inside the <span class="cj-highlight">source</span> folder, and at the very top you&#39;ll some of these settings along with comments that describe each one.</p>
+
+	<h4>API Methods</h4>
+<p>
+	JackBox has an API method that makes it easy to add an item to the lightbox list at any time.&nbsp; Here&#39;s a basic example with only required params:</p>
+<pre class="brush: js">
+// Always use the the jackBox.available() wrapper to make sure JackBox is available
+jQuery.jackBox.available(function() {
+&nbsp;&nbsp; &nbsp;
+&nbsp;&nbsp; &nbsp;jQuery(&quot;&lt;div /&gt;&quot;).html(&quot;New JackBox Item&quot;).css(&quot;cursor&quot;, &quot;pointer&quot;).appendTo(jQuery(&quot;body&quot;)).attr({
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &quot;data-group&quot;: &quot;info&quot;,
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &quot;data-href&quot;: &quot;jackbox/img/video_poster.jpg&quot;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp; &nbsp;}).jackBox(&quot;newItem&quot;);
+&nbsp;&nbsp; &nbsp;
+});
+</pre>
+<p>
+	And here&#39;s an example with all available options shown:</p>
+<pre class="brush: js">
+// Always use the the jackBox.available() wrapper to make sure JackBox is available
+jQuery.jackBox.available(function() {
+    
+    // just an example new item to be added
+    var div = jQuery(&quot;&lt;div /&gt;&quot;).html(&quot;New JackBox Item&quot;).css(&quot;cursor&quot;, &quot;pointer&quot;).appendTo(jQuery(&quot;body&quot;));
+    
+    // If the element doesn&#39;t have the appropriate data-attributes already applied,
+    // they can be explicitly set in the settings parameter as shown below
+    
+    // If you want to run the JackBox item right away, add a &quot;trigger&quot; param and set it to true,
+    // Otherwise, the element will be added to JackBox and can be triggered later by a user click
+    
+    div.jackBox(&quot;newItem&quot;, {
+       
+        group: &quot;info&quot;,
+        title: &quot;JackBox Just Works&quot;,
+        href: &quot;jackbox/img/video_poster.jpg&quot;,
+        trigger: true
+       
+    });
+    
+});
+</pre>
+<p>
+	To trigger a JackBox item manually once it&#39;s been added to the lightbox, you can use the following jQuery technique:</p>
+<pre class="brush: js">
+jQuery.jackBox.available(function() {
+    
+    jQuery(&quot;#someItem&quot;).trigger(&quot;click&quot;);
+    
+});
+</pre>
+<p>&nbsp;
+	</p>
+</section>
+<section id="bonuses">
+	<h4 id="bonuses_thumbnail_hovers">Thumbnail Hovers</h4>
+	For a thumbnail hover, simply add a &quot;hover div&quot; directly before the thumbnail image.&nbsp; Here&#39;s an example:</p>
+<pre class="brush: html">
+&lt;div class=&quot;jackbox-hover jackbox-hover-blur jackbox-hover-magnify&quot;&gt;
+
+&nbsp;&nbsp; &nbsp;&lt;p&gt;Gaussian Blur Hover&lt;/p&gt;
+&nbsp;&nbsp; &nbsp;
+&lt;/div&gt;&lt;img src=&quot;jackbox/img/thumbs/1.jpg&quot; width=&quot;180&quot; height=&quot;150&quot; alt=&quot;responsive lightbox&quot; /&gt;
+</pre>
+<p>
+	The text shown inside the div is optional and can be added to or removed.&nbsp;</p>
+<p>
+	The main div should always have the <span class="cj-highlight">jackbox-hover</span> class.&nbsp; The next two classes shown in the example above have the following options:</p>
+<p>
+	<strong>Background options:</strong></p>
+<ol>
+	<li>
+		jackbox-hover-blur</li>
+	<li>
+		jackbox-hover-white</li>
+	<li>
+		jackbox-hover-black</li>
+</ol>
+<p>
+	<strong>Icon Options:</strong></p>
+<ol>
+	<li>
+		jackbox-hover-magnify</li>
+	<li>
+		jackbox-hover-play</li>
+	<li>
+		jackbox-hover-document</li>
+</ol>
+<br />
+<h5>Custom Tooltips</h5>
+
+Tooltips are added similar to the hovers above.  But instead of a "jackbox-hover" class, the div will get a "jackbox-tooltip" class instead.  Here's an example:
+
+<pre class="brush: html">
+&lt;div class=&quot;jackbox-tooltip&quot;&gt;
+
+&nbsp;&nbsp; &nbsp;&lt;p&gt;Custom Tooltip&lt;/p&gt;
+&nbsp;&nbsp; &nbsp;
+&lt;/div&gt;&lt;img src=&quot;jackbox/img/thumbs/1.jpg&quot; width=&quot;180&quot; height=&quot;150&quot; alt=&quot;responsive lightbox&quot; /&gt;
+</pre>
+<br />
+<h4 id="bonuses_jackboxfx">JackBoxFX</h4>
+<p>
+	JackBoxFX are one of the bonuses included with JackBox.&nbsp; There are 8 different effects that you can create.&nbsp;</p>
+<p>
+	Some notes:</p>
+<ul>
+	<li>
+		The JackBoxFX plugin is completely independent of JackBox (but can also be used with JackBox).</li>
+	<li>
+		The thumbnail&#39;s parent element will automatically adopt a position of <span class="cj-highlight">relative</span> in order for the effect to work properly.</li>
+	<li>
+		The thumbnail&#39;s parent element must also have a <span class="cj-highlight">display</span> other than <span class="cj-highlight">inline</span>.&nbsp; This means it should either be <span class="cj-highlight">block</span> or <span class="cj-highlight">inline-block</span>.</li>
+	<li>
+		If the thumbnail&#39;s parent element has display set to <span class="cj-highlight">inline</span>, <span class="cj-highlight">inline-block</span> will be automatically applied</li>
+	<li>
+		The FX call is for IMAGES only. In the example below, any image with the class name <span class="cj-highlight">jackbox-fx</span> will get the chosen effect.</li>
+        <li>
+		Not all effects are supported cross-browser.  View the <span class="cj-highlight">jackbox_fx_all.html</span> in your web browser file for more information.</li>
+</ul>
+<p>
+	To add an effect, first add a custom class of id to the thumbnail itself.&nbsp; Here&#39;s an example:</p>
+<pre class="brush: html">
+&lt;img class=&quot;jackbox-fx&quot; src=&quot;jackbox/img/graphics/pixel.png&quot; data-src=&quot;jackbox/img/thumbs/6.jpg&quot; width=&quot;180&quot; height=&quot;150&quot; alt=&quot;JackBoxFX&quot; /&gt;
+</pre>
+<p>
+	Notice that the above example has a fake <span class="cj-highlight">src</span>, and the real url to the image is placed in the <span class="cj-highlight">data-src</span> attribute.&nbsp; This is because we need to load the image before the effect can be created with HTML5.&nbsp; JackBoxFX will take care of this automatically.</p>
+<p>
+	The one exception to the <span class="cj-highlight">data-src</span> rule above is the <span class="cj-highlight">zoom</span> effect.&nbsp; This is what a zoom effect looks like:</p>
+<pre class="brush: html">
+&lt;img class=&quot;jackbox-fx&quot; src=&quot;jackbox/img/thumbs/1.jpg&quot; data-zoom=&quot;jackbox/img/zooms/1.jpg&quot; width=&quot;180&quot; height=&quot;150&quot; alt=&quot;JackBoxFX&quot; /&gt;
+</pre>
+<p>
+	In the zoom example above, the src is used for the normal thumbnail url, and a <span class="cj-highlight">data-zoom</span> atrribute is used for the larger version of the thumbnail.&nbsp; <strong>The <span class="cj-highlight">data-zoom</span> attribute needs to be an image that is exactly 2x the size of the original.</strong></p>
+<p>
+	Here are the different JackBoxFX available:</p>
+<ol>
+	<li>
+		zoom</li>
+	<li>
+		shine</li>
+	<li>
+		blinds</li>
+	<li>
+		rubix</li>
+	<li>
+		scramble</li>
+	<li>
+		rotate</li>
+	<li>
+		flip</li>
+	<li>
+		scale</li>
+</ol>
+<p>
+	Once the image tag has been properly created, attaching an effect is easy.&nbsp; Here&#39;s a simple example.</p>
+<pre class="brush: js">
+$(document).ready(function() {
+    
+    $(&quot;.jackbox-fx&quot;).jackboxFX(&quot;zoom&quot;);
+    
+});
+
+</pre>
+<p>
+	The first part is the class we added to the image tag itself.&nbsp; The second part is the FX method.&nbsp; This method accepts two arguments.&nbsp; The first is the effect type which is mandatory.&nbsp; The second argument is for the optional settings.&nbsp; Here&#39;s an example:</p>
+<pre class="brush: js">
+$(document).ready(function() {
+    
+    $(&quot;.jackbox-zoom&quot;).jackboxFX(&quot;zoom&quot;, {
+        
+        // applies to the shine effect
+        shineContrast: 1.5,
+        shineBrightness: 30,
+        
+        // applies to the zoom effect
+        zoomBorder: &quot;1px solid rgba(0, 0, 0, 0.7)&quot;,
+        zoomBorderIE: &quot;1px solid #000&quot;,
+        
+        // applies to the rubix effect
+        rubixBorder: &quot;3px solid rgba(0, 0, 0, 0.75)&quot;,
+        rubixBorderIE: &quot;3px solid #000&quot;,
+       
+        cols: 4,// only applicable to effects numbered 3-8 above
+        rows: 3, // only applicable to effects numbered 3-8 above
+        color: &quot;#FFF&quot;, // only applicable to the &quot;blinds&quot; and &quot;rubix&quot; effect
+        reversed: false // only applicable to the &quot;scramble&quot; effect
+       
+    });
+    
+});
+
+</pre>
+<p>&nbsp;
+	</p>
+    
+    <h4 id="bonuses_standalone_video_player">Standalone Video Player</h4>
+<p>
+	Before reading this section, first open the following files:</p>
+<ul>
+	<li>
+		standalone_html5_video_player.html</li>
+	<li>
+		standalone_flash_video_player.html</li>
+</ul>
+<p>
+	These files are virtually identical, except one has <span class="cj-highlight">flashing</span> (Flash Priority) set to true and the other has <span class="cj-highlight">flashing</span> (Flash Priority) set to false.&nbsp; Check out <span class="cj-highlight">Local Video</span> under the <span class="cj-highlight">JackBox Examples</span> for a more detailed description about <span class="cj-highlight">Flash Priority</span>.</p>
+<p>
+	The video player is loaded as an iFrame, similar to how YouTube and Vimeo works.&nbsp; Here&#39;s an example:</p>
+<pre class="brush: html">
+&lt;iframe
+      
+  type=&quot;text/html&quot;
+  width=&quot;100%&quot;
+  height=&quot;100%&quot;  
+  frameborder=&quot;0&quot;
+  scrolling=&quot;no&quot;
+  mozallowfullscreen=&quot;mozallowfullscreen&quot;
+  webkitallowfullscreen=&quot;webkitallowfullscreen&quot;
+  allowfullscreen=&quot;allowfullscreen&quot;
+  src=&quot;jackbox/modules/jackbox_video.html?video=video/3.mp4&amp;autoplay=false&amp;flashing=true&amp;width=960&amp;height=540&amp;poster=img/video_poster.jpg&quot;
+      
+&gt;&lt;/iframe&gt;
+</pre>
+<p>
+	The <span class="cj-highlight">src</span> part is the one that will need to be edited.&nbsp; The first part of the <span class="cj-highlight">src</span> links to the video module itself:</p>
+<p>
+	<strong>jackbox/modules/jackbox_video.html</strong></p>
+<p><u>The following are the url parameters that need to be set:</u></p>
+<p>
+	<strong>video=video/3.mp4</strong> // the url to the mp4 version of the video</p>
+<p>
+	<strong>autoplay=false</strong> // choose autoplay, true/false</p>
+<p>
+	<strong>flashing=false</strong> // choose whether Flash has priority (see notes above)</p>
+<p>
+	<strong>width=960</strong> // the video&#39;s original width</p>
+<p>
+	<strong>height=540</strong> // the video&#39;s original height</p>
+<p>
+	<strong>poster=img/video_poster.jpg</strong> // the fallback poster when autoplay isn&#39;t available</p>
+<p>
+	<i>All of the url parameters are mandatory and their order should not be changed</i></p>
+<p>&nbsp;
+	</p>
+<p>&nbsp;
+	</p>
+    
+</section>
+
+<section id="more_works">
+	
+    <h4>More works by CodingJack</h4>
+    
+	<a class="cj" href="http://codecanyon.net/item/galleryjack-rebooted-a-jquery-fullscreen-gallery/844501" target="_blank"><span></span><img src="assets/images/galleryjack.jpg" width="590" height="300" alt="" /></a><br />
+    <a class="cj" href="http://codecanyon.net/item/blades-jquery-a-jquery-banner-rotator/239038" target="_blank"><span></span><img src="assets/images/blades.jpg" width="590" height="300" alt="" /></a><br />
+    <a class="cj fifty" href="http://themeforest.net/item/niarra-html5-template/2862711" target="_blank"><span></span><img src="assets/images/niarra.jpg" width="590" height="300" alt="" /></a>
+
+</section>
+
+	</div>
+</body>
+</html>

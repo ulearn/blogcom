@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+    
+    	<meta charset="utf-8" />
+        
+    	<title></title>
+        <meta name="description" content="" />
+
+        <!--[if lt IE 9]>
+        	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+		
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        
+        <!-- ***************************************************************************** -->
+        <!-- IMPORTANT: The "deploy" version of the lightbox already includes this script  -->
+        <!-- ***************************************************************************** -->
+        <script type="text/javascript" src="jackbox/js/libs/Jacked.js"></script>
+        
+        <script type="text/javascript" src="jackbox/js/jackbox-effects.js"></script>
+        
+        <script type="text/javascript">
+		
+			$(document).ready(function() {
+				
+				/*
+				The FX plugin is completely independent of JackBox.
+				The thumbnail's parent element will automatically adopt a position of "relative" in order for the FX to work properly.
+				The thumbnail's parent element must also have a "display" other than "inline".  This means it should either be "block" or "inline-block".
+				If the thumbnail's parent element has display set to "inline", "inline-block" will be automatically applied
+				The FX call is for IMAGES only. In the example below, any image with the class name "jackbox-fx" will get the chosen effect.
+				
+				FX Options: 
+				
+					1) zoom
+					2) shine
+					3) blinds
+					4) rubix
+					5) scramble
+					6) rotate
+					7) flip
+					8) scale
+				
+				Every option except "zoom" amust have the "pixel.png" as the "src", "data-src" for the actual image url
+				These are also HTML5 Canvas effects and will only work where supported
+				
+				#3 above must have a "data-zoom" attribute containing the url to the larger version. 
+				And the larger version must be exactly 2x the size of the original thumbnail.
+				This effect is compatible with IE8
+				
+				A typical effects call:
+				$("classname").jackboxFX(type:String, settings:Object = null);
+				
+				Settings options and their default values:
+				
+					shineContrast: 1.5, 
+					shineBrightness: 30,
+					
+					zoomBorder: "1px solid rgba(0, 0, 0, 0.7)",
+					zoomBorderIE: "1px solid #000",
+					
+					rubixBorder: "3px solid rgba(0, 0, 0, 0.75)",
+					rubixBorderIE: "3px solid #000",
+					
+					cols: 4,// only applicable to numbers 3-8 listed above
+					rows: 3, // only applicable to numbers 3-8 listed above
+					color: "#FFF", // only applicable to "blinds" and "rubix"
+					reversed: false // only applicable to "scramble"
+				
+				*/
+				$(".jackbox-zoom").jackboxFX("zoom");
+				$(".jackbox-shine").jackboxFX("shine");
+				$(".jackbox-rubix").jackboxFX("rubix", {cols: 6, rows: 5});
+				$(".jackbox-scramble").jackboxFX("scramble");
+				$(".jackbox-rotate").jackboxFX("rotate");
+				$(".jackbox-blinds").jackboxFX("blinds", {cols: 6, rows: 1});
+				$(".jackbox-flip").jackboxFX("flip", {cols: 1, rows: 5});
+				$(".jackbox-scale").jackboxFX("scale");
+				
+			});
+		
+		</script>
+        
+    </head>
+    
+
+	<body>
+        
+                    
+        <a href="http://codecanyon.net/user/CodingJack" target="_blank">
+            
+            <!-- All that's needed for an effect is to add one of the JackBoxFX classes to an image.  The image must be wrapped in a container such as the hyperlink above -->
+            <img class="jackbox-zoom" src="jackbox/img/thumbs/1.jpg" data-zoom="jackbox/img/zooms/1.jpg" width="180" height="150" alt="JackBox FX" />
+            
+        </a>
+                                          
+        <a href="http://codecanyon.net/user/CodingJack" target="_blank">
+            
+            <img class="jackbox-shine" src="jackbox/img/graphics/pixel.png" data-src="jackbox/img/thumbs/1.jpg" width="180" height="150" alt="JackBox FX" />
+
+        </a> 
+
+        <a href="http://codecanyon.net/user/CodingJack" target="_blank">
+            
+            <img class="jackbox-blinds" src="jackbox/img/graphics/pixel.png" data-src="jackbox/img/thumbs/1.jpg" width="180" height="150" alt="JackBox FX" />
+
+        </a>
+        
+        <a href="http://codecanyon.net/user/CodingJack" target="_blank">
+
+            <img class="jackbox-rubix" src="jackbox/img/graphics/pixel.png" data-src="jackbox/img/thumbs/1.jpg" width="180" height="150" alt="JackBox FX" />
+            
+        </a>
+
+        <a href="http://codecanyon.net/user/CodingJack" target="_blank">
+            
+            <img class="jackbox-scramble" src="jackbox/img/graphics/pixel.png" data-src="jackbox/img/thumbs/1.jpg" width="180" height="150" alt="JackBox FX" />
+            
+        </a>
+      
+        <a href="http://codecanyon.net/user/CodingJack" target="_blank">
+            
+            <img class="jackbox-rotate" src="jackbox/img/graphics/pixel.png" data-src="jackbox/img/thumbs/1.jpg" width="180" height="150" alt="JackBox FX" />
+            
+        </a>
+
+        <a href="http://codecanyon.net/user/CodingJack" target="_blank">
+            
+            <img class="jackbox-flip" src="jackbox/img/graphics/pixel.png" data-src="jackbox/img/thumbs/1.jpg" width="180" height="150" alt="JackBox FX" />
+            
+        </a>     
+    
+        <a href="http://codecanyon.net/user/CodingJack" target="_blank">
+
+            <img class="jackbox-scale" src="jackbox/img/graphics/pixel.png" data-src="jackbox/img/thumbs/1.jpg" width="180" height="150" alt="JackBox FX" />
+            
+        </a>
+
+    </body>
+    
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,4 @@
+name = TubePress Pro WordPress
+version = 3.0.0
+description = WordPress-specific TubePress Pro functionality
+classPathRoots[] = classes

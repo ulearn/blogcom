@@ -1,0 +1,24 @@
+{% if show_add_your_calendar or show_post_your_event %}
+	<div class="ai1ec-btn-group ai1ec-pull-right">
+		{% if show_add_your_calendar %}
+			<a href="#ai1ec-submit-ics-modal" class="ai1ec-btn ai1ec-btn-primary ai1ec-btn-xs"
+				data-toggle="ai1ec-modal">
+				<i class="ai1ec-fa ai1ec-fa-plus"></i>
+				{{ 'Add Your Feed' | __ }}
+			</a>
+		{% endif %}
+		{% if show_post_your_event %}
+			{% if show_front_end_create_form %}
+			<a href="#ai1ec-create-event-modal" class="ai1ec-btn ai1ec-btn-primary ai1ec-btn-xs"
+				data-toggle="ai1ec-modal">
+			{% else %}
+			<a href="{{ create_event_url | e('html_attr') }}" class="ai1ec-btn ai1ec-btn-primary ai1ec-btn-xs">
+			{% endif %}
+				<i class="ai1ec-fa ai1ec-fa-plus"></i>
+				{{ 'Post Your Event' | __ }}
+			</a>
+		{% endif %}
+	</div>
+{% endif %}
+
+{{ modals | raw }}

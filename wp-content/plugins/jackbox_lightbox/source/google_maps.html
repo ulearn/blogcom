@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+    
+    	<meta charset="utf-8" />
+        <meta name="viewport" id="view" content="width=device-width minimum-scale=1, maximum-scale=1" />
+        
+    	<title></title>
+        <meta name="description" content="" />
+        
+        <link href='http://fonts.googleapis.com/css?family=Mako' rel='stylesheet' type='text/css'>
+        <link href="jackbox/css/jackbox.css" rel="stylesheet" type="text/css" />
+        <link href="jackbox/css/jackbox_hovers.css" rel="stylesheet" type="text/css" />
+        
+        <!--[if lt IE 9]>
+        	<link href="jackbox/css/jackbox-ie8.css" rel="stylesheet" type="text/css" />
+        	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        
+        <!--[if gt IE 8]><link href="jackbox/css/jackbox-ie9.css" rel="stylesheet" type="text/css" /><![endif]-->
+        
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script type="text/javascript" src="jackbox/js/libs/jquery.address-1.5.min.js"></script>
+        <script type="text/javascript" src="jackbox/js/libs/Jacked.js"></script>
+        <script type="text/javascript" src="jackbox/js/jackbox-swipe.js"></script>
+        <script type="text/javascript" src="jackbox/js/jackbox.js"></script>
+        <script type="text/javascript" src="jackbox/js/libs/StackBlur.js"></script>
+        
+        <script type="text/javascript">
+		
+			jQuery(document).ready(function() {
+				
+				/* ******************* */
+				/* ALL JACKBOX OPTIONS */
+				/* ******************* */
+				
+				/*
+				jQuery(".jackbox[data-group]").jackBox("init", {
+				
+					deepLinking: true,              // choose to use the deep-linking feature ("true" will enhance social sharing!) true/false
+					showInfoByDefault: false,       // show item info automatically when content loads, true/false
+					preloadGraphics: true,          // preload the jackbox graphics for a faster jackbox
+					fullscreenScalesContent: true,  // Choose to always scale content up in fullscreen, true/false
+					defaultShareImage: "1.jpg",     // the default image to share for non-image items, only relevent to Pinterest
+					
+					autoPlayVideo: false,           // video autoplay default, this can also be set per video in the data-attributes, true/false
+					flashVideoFirst: false,         // choose which technology has first priority for video, HTML5 or Flash, true/false
+					defaultVideoWidth: 960,         // the default video width, can also be set per video in the data-attributes
+					defaultVideoHeight: 540,        // the default video width, can also be set per video in the data-attributes
+					
+					useThumbs: true,                // choose to use thumbnails, true/false
+					useThumbTooltips: true,         // choose to use thumbnail tooltips, true/false
+					thumbsStartHidden: false,       // choose to initially hide the thumbnail strip, true/false
+					thumbnailWidth: 75,             // the default video width, can also be set per video in the data-attributes
+					thumbnailHeight: 50,            // the default video height, can also be set per video in the data-attributes
+					showPageScrollbar: false,       // if you don't like the "page jump" when the scrollbar disappears, you can set this to true
+					useKeyboardControls: true       // The left and right keyboard arrows will cycle through the items.  up/down will toggle thumbs
+					
+				});
+				*/
+				
+				/* ******************** */
+				/* MINIMAL JACKBOX CALL */
+				/* ******************** */
+				jQuery(".jackbox[data-group]").jackBox("init");
+
+
+			});
+		
+		</script>
+
+    </head>
+    
+
+	<body>
+        
+        <!-- 
+                        
+            data-group              = The group/category, this is mandatory even for a single item
+            data-thumbnail          = Optional thumbnail to be used, original thumbnail will be used if this attribute is ommited.  
+                                      If tag is ommited and no original thumbnail exists either, if the item's JackBox content is an image, 
+                                      the large version of the image will be used and scaled.
+                                      If none of these options are available, the "default thumbnail" jpg will be used.
+            data-thumbTooltip       = Specify a lightbox thumb tooltip, otherwise it will be taken automatically from the title                       
+            data-title              = Optional item title, accepts text of html 
+            data-description        = Optional description, enter the id of the element where JackBox should grab the html/text from 
+            data-scaleUp            = JackBox will always scale images down if necessary. Setting this attribute to true will scale the content up as well
+            data-width              = Override the default width (only applicable when content is not an image) 
+            data-height             = Override the default height (only applicable when content is not an image)
+            data-flashHasPriority   = Applies to local video player, true = Flash w/ mobile backup, false = HTML5 with Flash backup 
+            data-poster             = Applies to local video, will be shown for mobile devices that don't support autoplay (when we can't grab the first frame of the video) 
+            data-autoplay           = Applies to video and audio
+            data-audiotitle         = The audio player song title
+            href/data-href          = the content to be loaded inside JackBox 
+            
+        -->
+        
+        <a class="jackbox" 
+        
+        	data-group="iframe" 
+            data-title="Google Maps" 
+            data-description="#description_1" 
+            href="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=brooklyn+pizza+534+North+4th+Avenue++Tucson,+AZ+85705&amp;aq=&amp;sll=32.228578,-110.965485&amp;sspn=0.008395,0.016512&amp;g=534+North+4th+Avenue++Tucson,+AZ+85705&amp;ie=UTF8&amp;hq=brooklyn+pizza&amp;hnear=534+N+4th+Ave,+Tucson,+Pima,+Arizona+85705&amp;t=m&amp;ll=32.233168,-110.971463&amp;spn=0.009801,0.020578&amp;z=16&amp;iwloc=A&amp;output=embed"
+            
+        ><!-- end opening tag -->
+                            
+            <div class="jackbox-hover jackbox-hover-black jackbox-hover-magnify"></div><img src="jackbox/img/thumbs/8.jpg" width="180" height="150" alt="responsive lightbox" />
+
+        </a> 
+        
+        <!-- Sample div used as an item's description, will only appear inside JackBox -->
+        <div class="jackbox-description" id="description_1">
+        
+        	<h3>Description Title</h3>
+            
+            <a href="#">Link</a> ipsum dolor sit amet, consectetur adipiscing elit. In est metus, tincidunt vitae eleifend sit amet, porta a sapien. Fusce in dolor nec purus facilisis dictum. tincidunt sed quam.
+            
+        </div>
+	
+    </body>
+    
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

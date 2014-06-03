@@ -1,0 +1,115 @@
+// ===============================
+// = Front-end create event form =
+// ===============================
+
+.ai1ec-create-event-form,
+.ai1ec-submit-ics-form {
+	.ai1ec-checkbox-label {
+		margin: 0;
+		padding: 5px 0 9px;
+		vertical-align: top;
+		span {
+			vertical-align: top;
+		}
+		input[type="checkbox"] {
+			margin: 0 0 3px;
+		}
+	}
+	.ai1ec-select2-multiselect-selector,
+	.ai1ec-tags-selector,
+	.select2-container {
+		width: 100%;
+	}
+	.ai1ec-fileupload .ai1ec-thumbnail {
+		.ai1ec-box-sizing( content-box );
+		min-width: 26px;
+		height: 26px;
+		margin-bottom: 0;
+		padding: 2px;
+	}
+	.ai1ec-recaptcha {
+		background: #f5f5f5;
+		border: 1px solid mix( @modal-content-border-color, @body-bg, 50% );
+		.ai1ec-box-shadow( @modal-footer-shadow );
+		#recaptcha_image img {
+			.ai1ec-box-shadow( 0 0 1px rgba(0,0,0,0.5) );
+		}
+		#recaptcha_area {
+			margin: 0 auto;
+		}
+		.ai1ec-initializing-message {
+			display: none;
+			text-align: center;
+		}
+		&.ai1ec-initializing {
+			background: url('@{imgdir}/ajax-loader.gif') no-repeat center 10px;
+			.ai1ec-initializing-message {
+				color: @text-muted;
+				margin: 50px 0 10px;
+				display: block;
+			}
+		}
+	}
+}
+
+.ai1ec-create-event-form {
+	.ai1ec-with-time {
+		display: none;
+	}
+	#ai1ec-end-time-wrap .col-sm-6:last-child {
+		margin-left: 4%;
+		width: 47%;
+	}
+	#ai1ec_map_canvas {
+		height: 100px;
+		margin-bottom: 9px;
+	}
+	#ai1ec-description {
+		max-width: 100%;
+	}
+	.ai1ec-start-time {
+    @media (min-width: @screen-sm-min) {
+    	margin-bottom: 0;
+    }
+	}
+}
+
+.ai1ec-submit-ics-form {
+	.ai1ec-recaptcha {
+		margin-bottom: 9px;
+	}
+}
+
+// ============================================================================
+// = Gmaps Autocomplete results (should be synced with timely-bootstrap.less) =
+// ============================================================================
+
+.ai1ec-geo-ac-results-not-ready {
+	// Hide by default (using a hiding attribute unused by the library).
+	// Only show once we have had a chance to do some markup-based styling in JS.
+	visibility: hidden;
+}
+.ai1ec-geo-ac-results {
+	img {
+		float: left;
+		margin-right: 5px;
+	}
+	.ai1ec-dropdown-menu {
+		display: block;
+		width: 275px;
+		li {
+			clear: left;
+			color: @dropdown-link-color;
+			cursor: pointer;
+			margin: 2px 0;
+			padding: 0 5px;
+			&:hover {
+				color: @dropdown-link-hover-color;
+				background-color: @dropdown-link-hover-bg;
+			}
+		}
+	}
+	.ai1ec-modal-open & {
+		z-index: @zindex-dropdown + @zindex-modal-background;
+	}
+}

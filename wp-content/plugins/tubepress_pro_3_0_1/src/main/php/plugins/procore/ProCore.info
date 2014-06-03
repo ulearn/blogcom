@@ -1,0 +1,6 @@
+name = TubePress Pro Core
+version = 3.0.0
+description = Core TubePress Pro functionality
+iocContainerExtensions[] = tubepress_plugins_procore_impl_patterns_ioc_IocContainerExtension
+iocContainerCompilerPasses[] = tubepress_plugins_procore_impl_patterns_ioc_ProCompilerPass
+classPathRoots[] = classes

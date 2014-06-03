@@ -1,0 +1,70 @@
+# Copyright (C) 2014 All-in-One Event Calendar CSV Feed by Time.ly
+# This file is distributed under the same license as the All-in-One Event Calendar CSV Feed by Time.ly package.
+msgid ""
+msgstr ""
+"Project-Id-Version: All-in-One Event Calendar CSV Feed by Time.ly 1.0.2\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/all-in-one-event-calendar-csv-"
+"feed\n"
+"POT-Creation-Date: 2014-04-29 18:58:39+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2014-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: all-in-one-event-calendar-csv-feed.php:40
+msgid "All In One Event Calendar must be installed to activate extensions"
+msgstr ""
+
+#: app/controller/ai1eccf.php:20
+msgid "CSV Feed - License Key"
+msgstr ""
+
+#: lib/calendar-feeds/csv.php:64
+msgid "CSV"
+msgstr ""
+
+#: lib/calendar-feeds/csv.php:89
+msgid "Submit Events"
+msgstr ""
+
+#: lib/calendar-feeds/csv.php:105
+msgid "Categories (optional)"
+msgstr ""
+
+#: lib/calendar-feeds/csv.php:119
+msgid "No events were found"
+msgstr ""
+
+#: lib/calendar-feeds/csv.php:122
+msgid "Imported %s event"
+msgid_plural "Imported %s events"
+msgstr[0] ""
+msgstr[1] ""
+
+#: lib/calendar-feeds/csv.php:280
+msgid "textarea_import"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "All-in-One Event Calendar CSV Feed by Time.ly"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "http://time.ly/extension/csv-feed"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Famous All-in-One Event Calendar extension giving you possibility to import "
+"CSV feeds of events"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Time.ly Network Inc."
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://time.ly/"
+msgstr ""

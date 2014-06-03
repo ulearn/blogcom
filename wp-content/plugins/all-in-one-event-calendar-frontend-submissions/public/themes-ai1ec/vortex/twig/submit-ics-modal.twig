@@ -1,0 +1,91 @@
+<div class="timely ai1ec-modal ai1ec-fade" id="ai1ec-submit-ics-modal">
+	<div class="ai1ec-modal-dialog">
+		<div class="ai1ec-modal-content">
+			<div class="ai1ec-loading"></div>
+			<div class="ai1ec-modal-header">
+				<button type="button" class="ai1ec-close" data-dismiss="ai1ec-modal">×</button>
+				<h2>{{ 'Add Your Calendar Feed' | __ }}</h2>
+			</div>
+			<form class="ai1ec-submit-ics-form ai1ec-form-horizontal">
+				<span class="ai1ec-nonce-fields">
+					{{ nonce_field | raw }}
+				</span>
+				<div class="ai1ec-modal-body">
+					<div id="ai1ec-submission-pane" class="ai1ec-collapse ai1ec-in">
+						<div class="ai1ec-alerts"></div>
+						<div class="ai1ec-prose">
+							<p>{{ 'If you know of an event feed you think belongs in this calendar, paste its iCalendar (.ics) feed’s URL below. If approved, its events will be added to this calendar.' | __ }}</p>
+						</div>
+						<div class="ai1ec-form-group">
+							<div class="ai1ec-col-sm-12">
+								<input class="ai1ec-form-control" type="text" value=""
+									id="ai1ec_calendar_url" name="ai1ec_calendar_url"
+									placeholder="{{ 'Paste your calendar’s iCalendar (.ics) feed URL' | __ | e('html_attr') }}">
+							</div>
+						</div>
+						<div class="ai1ec-form-group">
+							<div class="ai1ec-col-sm-6">
+								{{ categories | raw }}
+							</div>
+							<div class="ai1ec-col-sm-6">
+								<input class="ai1ec-form-control" type="text" value=""
+									id="ai1ec_submitter_email" name="ai1ec_submitter_email"
+									placeholder="{{ 'Enter your e-mail address' | __ | e('html_attr') }}">
+							</div>
+						</div>
+						{# reCAPTCHA. #}
+						{% if recaptcha_key %}
+							<div class="ai1ec-recaptcha"
+								data-placeholder="{{ 'Verification words' | __ | e('html_attr') }}"
+								data-recaptcha-key="{{ recaptcha_key | e('html_attr') }}">
+								<div class="ai1ec-initializing-message">
+									{{ 'Loading reCAPTCHA...' | __ }}
+								</div>
+							</div>
+						{% endif %}
+					</div>
+
+					<p class="ai1ec-centered">
+						<a href="#ai1ec-submission-pane" id="ai1ec-download-toggle"
+							class="ai1ec-btn ai1ec-btn-info ai1ec-btn-lg" data-toggle="ai1ec-collapse">
+							<i class="ai1ec-fa ai1ec-fa-download ai1ec-fa-lg"></i>
+							{{ 'Get Your Own Calendar' | __ }}
+							<i class="ai1ec-fa ai1ec-fa-chevron-down"></i>
+							<i class="ai1ec-fa ai1ec-fa-chevron-up ai1ec-hide"></i>
+						</a>
+					</p>
+
+					<div id="ai1ec-info-pane" class="ai1ec-collapse ai1ec-prose">
+						{% autoescape false %}
+						<p>
+							{{ 'If you already have your own <a href="http://wordpress.org/" target="_blank">WordPress</a> website, it’s easy to install your own <strong>All-in-One Event Calendar from Timely</strong>:' | __ }}
+						</p>
+						<ol>
+							<li>{{ 'Browse to <a href="http://time.ly/get-your-own-calendar" target="_blank">time.ly/get-your-own-calendar</a>.' | __ }}</li>
+							<li>{{ 'Download the <em>free</em> <strong>All-in-One Event Calendar</strong> plugin.' | __ }}</li>
+							<li>{{ 'Log into your WordPress dashboard.' | __ }}</li>
+							<li>{{ 'Browse to <strong>Plugins</strong> &gt; <strong>Add New</strong> &gt; <strong>Upload</strong>.' | __ }}</li>
+							<li>{{ 'Choose the .zip file you just downloaded, and click <strong>Install Now</strong>.' | __ }}</li>
+						</ol>
+						<p>
+							{{ 'That’s it! You’ll have your own <strong>All-in-One Calendar</strong> up and running within minutes.' | __ }}
+						</p>
+						<p>
+							{{ 'For help or for more information, please visit <a href="http://support.time.ly/" target="_blank">Timely Support</a>.' | __ }}
+						</p>
+						{% endautoescape %}
+					</div>
+				</div>
+				<div class="ai1ec-modal-footer">
+					<div class="ai1ec-collapse ai1ec-in ai1ec-pane">
+						<button type="submit"
+							class="ai1ec-btn ai1ec-btn-lg ai1ec-btn-primary ai1ec-submit">
+							{{ 'Submit for review' | __ }}
+							<i class="ai1ec-fa ai1ec-fa-chevron-right"></i>
+						</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>

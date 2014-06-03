@@ -1,0 +1,69 @@
+<div class="row-fluid">
+	{% if message %}
+		<div class='ai1ec-alert ai1ec-alert-success'>
+			{{ message | e('html_attr') }}
+		</div>
+	{% endif %}
+	<div class="pull-left">
+		<label for="ai1ec_file_input">
+			{{ 'Import events from a CSV file or iCalendar (.ics) feed:' | __ }}
+		</label>
+		<input
+			id="{{ file_input.id | e('html_attr') }}" 
+			type="{{ file_input.type | e('html_attr') }}" 
+			name="{{ file_input.name | e('html_attr') }}" />
+	</div>
+</div>
+<div class="row-fluid ai1ec-form-group">
+	<div class="pull-left ai1ec_textarea_wrapper">
+		<label for="ai1ec_upload_textarea">
+			{{ 'Or paste your CSV data or iCalendar (.ics) feed here:' | __ }}
+		</label>
+		<textarea
+			class='ai1ec-form-control'
+			name="{{ textarea.name | e('html_attr') }}"
+			rows="{{ textarea.rows | e('html_attr') }}"
+			id="{{ textarea.id | e('html_attr') }}"></textarea>
+	</div>
+</div>
+<div class="row-fluid ai1ec_file_upload_tags_categories">
+	<div class="span12">
+		<div class="ai1ec-feed-category ai1ec-col-xs-5">
+			{{ category_select.render() }}
+		</div>
+		<div class="ai1ec-feed-tags ai1ec-col-xs-5">
+			{{ tags.render() }}
+		</div>
+	</div>
+</div>
+<div class="row-fluid">
+	<label for="ai1ec_file_upload_comments_enabled">
+		<input type="checkbox" name="ai1ec_file_upload_comments_enabled"
+			   id="ai1ec_file_upload_comments_enabled" value="1" />
+		{{ 'Allow comments on imported events' | __ }}
+	</label>
+</div>
+<div class="row-fluid">
+	<label for="ai1ec_file_upload_map_display_enabled">
+		<input type="checkbox" name="ai1ec_file_upload_map_display_enabled"
+			   id="ai1ec_file_upload_map_display_enabled" value="1" />
+		{{ 'Show map on imported events' | __ }}
+	</label>
+</div>
+<div class="row-fluid">
+	<label for="ai1ec_file_upload_add_tag_categories">
+		<input type="checkbox" name="ai1ec_file_upload_add_tag_categories"
+			   id="ai1ec_file_upload_add_tag_categories" value="1" />
+		{{ 'Import any tags/categories provided by feed, in addition those selected above' | __ }}
+	</label>
+</div>
+<div class="row-fluid ai1ec_submit_wrapper">
+	<div class="span12 ai1ec-text-right">
+		<input
+			class='ai1ec-btn ai1ec-btn-primary ai1ec-btn-lg'
+			id="{{ submit.id | e('html_attr') }}"
+			type="{{ submit.type | e('html_attr') }}"
+			name="{{ submit.name | e('html_attr') }}"
+			value="{{ submit.value | e('html_attr') }}" />
+	</div>
+</div>

@@ -1,0 +1,95 @@
+{{ navigation | raw }}
+
+<div class="ai1ec-stream-view">
+	{% if dates is empty %}
+		<p class="ai1ec-no-results">
+			{{ 'There are no upcoming events to display at this time.' | __ }}
+		</p>
+	{% else %}
+		{% for date, date_info in dates %}
+			<div class="ai1ec-date {% if date_info.today %}ai1ec-today{% endif %}">
+				<div class="ai1ec-date-title">
+					<a class="ai1ec-load-view" href="{{ date_info.href | e('html_attr') }}"
+						{{ data_type | raw }}>
+						{% if show_year_in_agenda_dates %}
+							{{ date | date_i18n( 'F j, Y (l)' ) }}
+						{% else %}
+							{{ date | date_i18n( 'F j (l)' ) }}
+						{% endif %}
+					</a>
+				</div>
+
+				<div class="ai1ec-date-events">
+					{% for category in date_info.events %}
+						{% for event in category %}
+							<div class="ai1ec-clearfix ai1ec-event
+								ai1ec-event-id-{{ event.get( 'post_id' ) }}
+								ai1ec-event-instance-id-{{ event.get( 'instance_id' ) }}
+								{% if event.is_allday %}ai1ec-allday{% endif %}">
+
+								<div class="ai1ec-event-inner ai1ec-clearfix">
+
+									{% set edit_post_link = event.get_runtime( 'edit_post_link' ) %}
+									{% if edit_post_link is not empty %}
+										<a class="post-edit-link" href="{{ edit_post_link | raw }}">
+											<i class="ai1ec-fa ai1ec-fa-pencil"></i> {{ 'Edit' | __ }}
+										</a>
+									{% endif %}
+
+									<div class="ai1ec-event-title">
+										<a class="ai1ec-load-event"
+											href="{{ event.get_runtime( 'instance_permalink' ) | e('html_attr') }}"
+										  {{ event.get_runtime( 'category_text_color' ) | raw }}
+										  {{ data_type_events | raw }}
+										  title="{{ event.get_runtime( 'filtered_title' ) | raw }}">
+											{{ event.get_runtime( 'filtered_title' ) | raw }}
+										</a>
+										{% if show_location_in_title and event.get( 'venue' ) is not empty %}
+											<span class="ai1ec-event-location"
+												>{{ '@ %s' | __ | format( event.get( 'venue' ) ) }}</span>
+										{% endif %}
+									</div>
+
+									<div class="ai1ec-event-avatar-wrap ai1ec-pull-left">
+										{{ event | avatar( [
+											'post_thumbnail',
+											'content_img',
+											'category_avatar',
+											'default_avatar'
+											] ) | raw }}
+									</div>
+
+									<div class="ai1ec-event-meta">
+										<span class="ai1ec-event-time">
+											<i class="ai1ec-fa ai1ec-fa-calendar"></i>
+											{{ event | timespan( 'short' ) | raw }}
+										</span>
+										{% set categories =
+											event.get_runtime( 'categories_html' ) %}
+										{% set tags =
+											event.get_runtime( 'tags_html' ) %}
+										{% if categories is not empty %}
+											<span class="ai1ec-categories ai1ec-meta-divide">
+												{{ categories | raw }}
+											</span>
+										{% endif %}
+										{% if tags is not empty %}
+											<span class="ai1ec-tags ai1ec-meta-divide">
+												{{ tags | raw }}
+											</span>
+										{% endif %}
+									</div>
+									<div class="ai1ec-event-description">
+										{{ event.get_runtime( 'post_excerpt' ) | raw }}
+									</div>
+								</div>
+							</div>
+						{% endfor %} {# category in date_info.events #}
+					{% endfor %} {# event in category #}
+				</div>
+			</div>
+		{% endfor %} {# date, date_info in dates #}
+	{% endif %} {# dates is not empty #}
+</div>
+
+<div class="ai1ec-pull-right">{{ pagination_links | raw }}</div>

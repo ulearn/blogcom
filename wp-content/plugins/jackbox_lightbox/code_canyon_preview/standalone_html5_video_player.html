@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+    
+    	<meta charset="utf-8" />
+        <meta name="viewport" id="view" content="width=device-width minimum-scale=1, maximum-scale=1" />
+        
+    	<title>JackBox - HTML5 Video Player</title>
+        <meta name="description" content="JackBox - HTML5 Video Player" />
+        
+        <style type="text/css">
+			
+			html, body {
+			
+				width: 100%;
+				height: 100%;
+				
+			}
+			
+			body {
+			
+				background: #000 url(jackbox/img/bg.jpg) no-repeat;
+				background-size: cover;
+				overflow: hidden;
+				margin: 0;
+				
+			}
+			
+			#wrapper {
+			
+				width: 100%;
+				height: 100%;
+				display: table;
+				margin: 0;
+				padding: 0;
+				
+			}
+			
+			#holder {
+			
+				display: table-cell;
+				margin: 0;
+				padding: 0;
+				width: 100%;
+				height: 100%;
+				vertical-align: middle;
+				
+			}
+			
+			#container {
+			
+				width: 960px;
+				height: 540px;
+				background-color: #FFF;
+				margin: 0 auto;
+				
+			}
+			
+			.respond {
+				
+				font: 12px "Courier New", Courier, monospace;
+				margin: 10px 0 0 0;
+				text-align: center;
+				line-height: 18px;
+				color: #EEE;
+				
+			}
+			
+			/* The iframe needs to exist inside a liquid/responsive container */
+			@media screen and (max-width: 960px) {
+	
+				#container {
+			
+					width: 100%;
+					height: 100%;
+					
+				}
+				
+			}
+		
+		</style>
+
+    </head>
+    
+
+	<body>
+        
+        <div id="wrapper">
+            
+            <div id="holder">
+            	
+                <div id="container">
+                	
+                    <!-- 
+                    
+                    	This is the only part you need to use the video player.
+                        Video is loaded via iframe similar to Youtube and Vimeo.
+                        All of the url parameters are mandatory. Their order should not be altered.
+                        
+                        "flashing" = Flash priority.  
+                        	
+                            - If true, the video will try to play in Flash before falling back to HTML5.
+                        	- If false, the video will try to play in HTML5 before falling back to Flash.
+                            
+                        "firefox" = always use Flash for Firefox
+                         
+                         	- Set this to true if you wish to use the HTML player w/ Flash fallback but want Firefox to use Flash no matter what
+							- This is useful when you want to use the HTML5 version of the player but don't want to create a webm fallback for Firefox
+                            
+                    -->
+                    <iframe
+                            
+                        type="text/html" 
+                        width="100%" 
+                        height="100%"  
+                        frameborder="0" 
+                        scrolling="no" 
+                        mozallowfullscreen="mozallowfullscreen" 
+                        webkitallowfullscreen="webkitallowfullscreen" 
+                        allowfullscreen="allowfullscreen" 
+                        src="jackbox/modules/jackbox_video.html?video=../video/1.mp4&autoplay=false&flashing=false&width=960&height=540&poster=../img/video_poster.jpg&firefox=false"
+                            
+                     ></iframe>
+                     
+                 </div>
+                 
+                 <p class="respond">Responsive, HTML5 Video Player w/ Flash Fallback<br />Doubles as a Flash Video Player w/ Mobile Fallback</p>
+                 
+             </div>
+           
+        </div>
+        
+        
+    </body>
+    
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

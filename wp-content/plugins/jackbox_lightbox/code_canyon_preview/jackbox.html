@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+    
+    	<meta charset="utf-8" />
+        <meta name="viewport" id="view" content="width=device-width minimum-scale=1, maximum-scale=1" />
+        
+    	<title>JackBox - A Responsive Lightbox with Retina Display Graphics and Social Sharing</title>
+        <meta name="description" content="Responsive Lightbox" />
+        
+        <link href='http://fonts.googleapis.com/css?family=Dancing+Script:700|Mako' rel='stylesheet' type='text/css'>
+        <link href="preview.css" rel="stylesheet" type="text/css" />
+        <link href="jackbox/css/jackbox.css" rel="stylesheet" type="text/css" />
+        <link href="jackbox/css/jackbox_hovers.css" rel="stylesheet" type="text/css" />
+        
+        <!--[if lt IE 9]>
+        	<link href="jackbox/css/jackbox-ie8.css" rel="stylesheet" type="text/css" />
+        	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        
+        <!--[if gt IE 8]><link href="jackbox/css/jackbox-ie9.css" rel="stylesheet" type="text/css" /><![endif]-->
+        
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script type="text/javascript" src="jackbox/js/libs/jquery.address-1.5.min.js"></script>
+        <script type="text/javascript" src="jackbox/js/libs/Jacked.js"></script>
+        <script type="text/javascript" src="jackbox/js/jackbox-swipe.js"></script>
+        <script type="text/javascript" src="jackbox/js/jackbox.js"></script>
+        <script type="text/javascript" src="jackbox/js/libs/StackBlur.js"></script>
+        
+        <script type="text/javascript">
+		
+			jQuery(document).ready(function() {
+				
+				/* ******************* */
+				/* ALL JACKBOX OPTIONS */
+				/* ******************* */
+				
+				/*
+				jQuery(".jackbox[data-group]").jackBox("init", {
+				
+					deepLinking: true,              // choose to use the deep-linking feature ("true" will enhance social sharing!) true/false
+					showInfoByDefault: false,       // show item info automatically when content loads, true/false
+					preloadGraphics: true,          // preload the jackbox graphics for a faster jackbox
+					fullscreenScalesContent: true,  // Choose to always scale content up in fullscreen, true/false
+					defaultShareImage: "1.jpg",     // the default image to share for non-image items, only relevent to Pinterest
+					
+					autoPlayVideo: false,           // video autoplay default, this can also be set per video in the data-attributes, true/false
+					flashVideoFirst: false,         // choose which technology has first priority for video, HTML5 or Flash, true/false
+					defaultVideoWidth: 960,         // the default video width, can also be set per video in the data-attributes
+					defaultVideoHeight: 540,        // the default video width, can also be set per video in the data-attributes
+					
+					useThumbs: true,                // choose to use thumbnails, true/false
+					useThumbTooltips: true,         // choose to use thumbnail tooltips, true/false
+					thumbsStartHidden: false,       // choose to initially hide the thumbnail strip, true/false
+					thumbnailWidth: 75,             // the default video width, can also be set per video in the data-attributes
+					thumbnailHeight: 50,            // the default video height, can also be set per video in the data-attributes
+					showPageScrollbar: false,       // if you don't like the "page jump" when the scrollbar disappears, set this to "true"
+					useKeyboardControls: true       // The left and right keyboard arrows will cycle through the items.  up/down will toggle thumbs
+					
+				});
+				*/
+				
+				/* ******************** */
+				/* MINIMAL JACKBOX CALL */
+				/* ******************** */
+				jQuery(".jackbox[data-group]").jackBox("init");
+				
+				
+				/* ************* */
+				/* DYNAMIC CALLS */
+				/* ************* */
+				
+				// An item can be added to JackBox dynamically at any time 
+				// Always use the the jackBox.available() wrapper to make sure JackBox is available
+				
+				/*
+				jQuery.jackBox.available(function() {
+					
+					var div = jQuery("<div />").html("New JackBox Item").css("cursor", "pointer").appendTo(jQuery("body"));
+					
+					// If the element doesn't have the appropriate data-attributes already applied, 
+					// they can be explicitly set in the settings parameter as shown below
+					
+					// If you want to run the JackBox item right away, add a "trigger" param and set it to true,
+					// Otherwise, the element will be added to JackBox and can be triggered later by a user click
+					
+					div.jackBox("newItem", {
+						
+						group: "info", 
+						title: "JackBox - Responsive Lightbox",
+						href: "jackbox/img/video_poster.jpg",
+						trigger: true
+						
+					});
+					
+				});
+				*/
+				
+				// A JackBox item can be manually triggered at any time
+				// Here's an example
+				
+				/* 
+				jQuery.jackBox.available(function() {
+					
+					jQuery("#someItem").trigger("click");
+					
+				});
+				*/
+
+
+			});
+		
+		</script>
+
+
+    </head>
+    
+
+	<body>
+        
+        <div id="wrapper">
+        	
+            <div id="holder">
+            
+            	<h1>JackBox</h1>
+                <h3>A Kick Ass Responsive Lightbox with Social Sharing  <a class="jackbox" data-group="info" data-title="JackBox - Responsive Lightbox" data-width="640" href="#learn-more">Learn More</a></h3>
+
+            	<div id="container">
+                    
+                    <figure class="box">
+                    
+                        <!-- 
+                        
+                            data-group              = The group/category, this is mandatory even for a single item
+                            data-thumbnail          = Optional thumbnail to be used, original thumbnail will be used if this attribute is ommited.  
+                                                      If tag is ommited and no original thumbnail exists either, if the item's JackBox content is an image, 
+                                                      the large version of the image will be used and scaled.
+                                                      If none of these options are available, the "default thumbnail" jpg will be used.
+                            data-thumbTooltip       = Specify a lightbox thumb tooltip, otherwise it will be taken automatically from the title                       
+                            data-title              = Optional item title, accepts text of html 
+                            data-description        = Optional description, enter the id of the element where JackBox should grab the html/text from 
+                            data-scaleUp            = JackBox will always scale images down if necessary. Setting this attribute to true will scale the content up as well
+                            data-width              = Override the default width (only applicable when content is not an image) 
+                            data-height             = Override the default height (only applicable when content is not an image)
+                            data-flashHasPriority   = Applies to local video player, true = Flash w/ mobile backup, false = HTML5 with Flash backup 
+                            data-firefoxUsesFlash   = Set this to true if you wish to use the HTML player w/ Flash fallback but want Firefox to use Flash no matter what
+                                                      This is useful when you want to use the HTML5 version of the player but don't want to create a webm fallback for Firefox
+                            data-poster             = Applies to local video, will be shown for mobile devices that don't support autoplay (when we can't grab the first frame of the video) 
+                            data-autoplay           = Applies to video and audio
+                            data-audiotitle         = The audio player song title
+                            href/data-href          = the content to be loaded inside JackBox 
+                            
+                        -->
+                        <a class="jackbox" 
+                        
+                        	data-group="images" 
+                            data-thumbnail="jackbox/img/thumbs/1a.jpg" 
+                            data-thumbTooltip="Awesome Looking Car" 
+                            data-title="Awesome Car with <a href='http://www.google.com' target='_blank'>link</a>" 
+                            data-description="#description_1" 
+                            href="jackbox/img/photos/1.jpg"
+                            
+                        ><!-- end opening tag -->
+    
+                            <!-- thumbnail -->
+                            <div class="jackbox-hover jackbox-hover-blur jackbox-hover-magnify"><p>Gaussian Blur Hover</p></div><img src="jackbox/img/thumbs/1.jpg" width="180" height="150" alt="responsive lightbox" />
+                            
+                        </a>
+
+                        <ul class="jackbox-hidden-items">
+                        	
+                            <!-- for hidden items, "data-href" is used instead of the regular "href" attribute that regular links use like above -->
+                        	<li class="jackbox" data-group="images" data-title="Man Wearing Jacket" data-description="#description_1" data-thumbnail="jackbox/img/thumbs/2a.jpg" data-href="jackbox/img/photos/2.jpg"></li>
+                            
+                            <li class="jackbox" data-group="images" data-title="Leather Coat" data-description="#description_1" data-thumbnail="jackbox/img/thumbs/3a.jpg" data-href="jackbox/img/photos/3.jpg"></li>
+                            <li class="jackbox" data-group="images" data-title="Man Wearing Scarf" data-description="#description_1" data-thumbnail="jackbox/img/thumbs/4a.jpg" data-href="jackbox/img/photos/4.jpg"></li>
+                            <li class="jackbox" data-group="images" data-title="Cool Sunglasses" data-description="#description_1" data-thumbnail="jackbox/img/thumbs/5a.jpg" data-href="jackbox/img/photos/5.jpg"></li>
+                            <li class="jackbox" data-group="images" data-title="Coffee Mug" data-description="#description_1" data-thumbnail="jackbox/img/thumbs/6a.jpg" data-href="jackbox/img/photos/6.jpg"></li>
+                            <li class="jackbox" data-group="images" data-title="Woman Wearing Rings" data-description="#description_1" data-thumbnail="jackbox/img/thumbs/7a.jpg" data-href="jackbox/img/photos/7.jpg"></li>
+                            <li class="jackbox" data-group="images" data-title="Awesome Car" data-description="#description_1" data-thumbnail="jackbox/img/thumbs/8a.jpg" data-href="jackbox/img/photos/8.jpg"></li>
+                            <li class="jackbox" data-group="images" data-title="Hey There" data-description="#description_1" data-thumbnail="jackbox/img/thumbs/9a.jpg" data-href="jackbox/img/photos/9.jpg"></li>
+                            <li class="jackbox" data-group="images" data-title="Hair Products" data-description="#description_1" data-thumbnail="jackbox/img/thumbs/10a.jpg" data-href="jackbox/img/photos/10.jpg"></li>
+                            <li class="jackbox" data-group="images" data-title="Cool Shades" data-description="#description_1" data-thumbnail="jackbox/img/thumbs/11a.jpg" data-href="jackbox/img/photos/11.jpg"></li>
+                            <li class="jackbox" data-group="images" data-title="Fur Coat" data-description="#description_1" data-thumbnail="jackbox/img/thumbs/12a.jpg" data-href="jackbox/img/photos/12.jpg"></li>
+                            <li class="jackbox" data-group="images" data-title="Nail Products" data-description="#description_1" data-thumbnail="jackbox/img/thumbs/13a.jpg" data-href="jackbox/img/photos/13.jpg"></li>
+                            <li class="jackbox" data-group="images" data-title="Summer Dress" data-description="#description_1" data-thumbnail="jackbox/img/thumbs/14a.jpg" data-href="jackbox/img/photos/14.jpg"></li>
+                            <li class="jackbox" data-group="images" data-title="Stylish Coat" data-description="#description_1" data-thumbnail="jackbox/img/thumbs/15a.jpg" data-href="jackbox/img/photos/15.jpg"></li>
+                            <li class="jackbox" data-group="images" data-title="Lipstick Makeup" data-description="#description_1" data-thumbnail="jackbox/img/thumbs/16a.jpg" data-href="jackbox/img/photos/16.jpg"></li>
+                        
+                        </ul>
+                        
+                        <figcaption>Image Gallery w/ Touch Swipe<br /><a class="view-code" href="http://www.codingjack.com/jackbox/under_the_hood.html" target="_blank">view code</a></figcaption>
+                        
+                    </figure>
+					
+                    <figure class="box">
+                    
+                        <a class="jackbox" data-group="vimeo" data-title="Surrealist Dollhouse" data-description="#description_1" href="http://vimeo.com/17573879">
+                            
+                            <div class="jackbox-hover jackbox-hover-blur jackbox-hover-magnify"></div><img src="jackbox/img/thumbs/8.jpg" width="180" height="150" alt="responsive lightbox" />
+
+                        </a> 
+  
+                        <ul class="jackbox-hidden-items">
+                        	
+                            <!-- Thumbnails are loaded automatically from Vimeo.com video so there's no need for the "data-thumbnail" attribute -->
+                        	<li class="jackbox" data-group="vimeo" data-title="Kilogramme" data-description="#description_1" data-href="http://vimeo.com/17516687"></li>
+                            
+                            <li class="jackbox" data-group="vimeo" data-title="Dreamland Sender" data-description="#description_1" data-href="http://vimeo.com/17586987"></li>
+                            <li class="jackbox" data-group="vimeo" data-title="Google eBooks" data-description="#description_1" data-href="http://vimeo.com/17574435"></li>
+                            <li class="jackbox" data-group="vimeo" data-title="Henning Sandström" data-description="#description_1" data-href="http://vimeo.com/35416846"></li>
+                            <li class="jackbox" data-group="vimeo" data-title="The Holstee Manifesto" data-description="#description_1" data-href="http://vimeo.com/34414313"></li>
+                            <li class="jackbox" data-group="vimeo" data-title="Nothing To Fear" data-description="#description_1" data-href="http://vimeo.com/17593192"></li>
+                            <li class="jackbox" data-group="vimeo" data-title="Refraction" data-description="#description_1" data-href="http://vimeo.com/16980912"></li>
+                            <li class="jackbox" data-group="vimeo" data-title="MaxDreamCreator" data-description="#description_1" data-href="http://vimeo.com/35454524"></li>
+                            <li class="jackbox" data-group="vimeo" data-title="Leif Enger" data-description="#description_1" data-href="http://vimeo.com/35427418"></li>
+                        
+                        </ul>
+                        
+                        <figcaption>Vimeo Video<br /><a class="view-code" href="http://www.codingjack.com/jackbox/under_the_hood.html#vimeo" target="_blank">view code</a></figcaption>
+                        
+                    </figure>
+                    
+                    <figure class="box">
+                    	
+                        <a class="jackbox" data-group="youtube" data-title="Se7en" data-description="#description_1" href="http://www.youtube.com/watch?v=-k2gsEI34CE">
+                            
+                            <div class="jackbox-hover jackbox-hover-black jackbox-hover-play"><p>Optional Text</p></div><img src="jackbox/img/thumbs/5.jpg" width="180" height="150" alt="responsive lightbox" />
+    
+                        </a>
+
+                        <ul class="jackbox-hidden-items">
+                        	
+                            <!-- Thumbnails are loaded automatically from YouTube.com video so there's no need for the "data-thumbnail" attribute -->
+                            <li class="jackbox" data-group="youtube" data-title="Safe House" data-description="#description_1" data-href="http://www.youtube.com/watch?v=oWzTOoOpFa8"></li>
+                            
+                            <li class="jackbox" data-group="youtube" data-title="Battlefield 3" data-description="#description_1" data-href="http://www.youtube.com/watch?v=coOHjF4_apI"></li>
+                            <li class="jackbox" data-group="youtube" data-title="Drive" data-description="#description_1" data-href="http://www.youtube.com/watch?v=sY1TLgqfjvw"></li>
+                            <li class="jackbox" data-group="youtube" data-title="Hugo" data-description="#description_1" data-href="http://www.youtube.com/watch?v=hR-kP-olcpM"></li>
+                            <li class="jackbox" data-group="youtube" data-title="Inception" data-description="#description_1" data-href="http://www.youtube.com/watch?v=66TuSJo4dZM"></li>
+                            <li class="jackbox" data-group="youtube" data-title="Spiderman 4" data-description="#description_1" data-href="http://www.youtube.com/watch?v=0UFnV_lMOpY"></li>
+                            <li class="jackbox" data-group="youtube" data-title="Street Fighter" data-description="#description_1" data-href="http://www.youtube.com/watch?v=LpvOfCLe3A0"></li>
+                            <li class="jackbox" data-group="youtube" data-title="Underworld Awakening" data-description="#description_1" data-href="http://www.youtube.com/watch?v=tUcrbUCWKQc"></li>
+                            <li class="jackbox" data-group="youtube" data-title="Avatar" data-description="#description_1" data-href="http://www.youtube.com/watch?v=5PSNL1qE6VY"></li>
+                        
+                        </ul>
+                        
+                        <figcaption>Youtube Video<br /><a class="view-code" href="http://www.codingjack.com/jackbox/under_the_hood.html#youtube" target="_blank">view code</a></figcaption>
+                        
+                    </figure>
+                    
+                    <figure class="box">
+                    
+                        <a class="jackbox" 
+                        
+                            data-group="video" 
+                            data-thumbnail="jackbox/img/thumbs/7a.jpg" 
+                            data-title="HTML5/Flash Video" 
+                            data-description="#description_1" 
+                            data-flashHasPriority="false" 
+                            data-firefoxUsesFlash="false" 
+                            data-autoplay="true" 
+                            data-width="958" 
+                            data-height="538" 
+                            data-poster="jackbox/img/video_poster.jpg" 
+                            href="jackbox/video/1.mp4"
+                            
+                        ><!-- end opening tag -->
+ 
+                            <div class="jackbox-hover jackbox-hover-black jackbox-hover-play"></div><img src="jackbox/img/thumbs/7.jpg" width="180" height="150" alt="responsive lightbox" />
+                            
+                        </a>
+
+                        <ul class="jackbox-hidden-items">
+                        
+                            <li class="jackbox" 
+                            
+                            	data-group="video" 
+                                data-thumbnail="jackbox/img/thumbs/1a.jpg" 
+                                data-title="Flash w/ Mobile Backup" 
+                                data-description="#description_1" 
+                                data-flashHasPriority="true" 
+                                data-firefoxUsesFlash="false" 
+                                data-autoplay="true" 
+                                data-width="958" 
+                                data-height="538" 
+                                data-poster="jackbox/img/video_poster.jpg" 
+                                data-href="jackbox/video/1.mp4"
+                                
+                            ></li>
+                            
+                            <li class="jackbox" 
+                            
+                            	data-group="video" 
+                                data-thumbnail="jackbox/img/thumbs/2a.jpg" 
+                                data-title="HTML5/Flash Video" 
+                                data-description="#description_1" 
+                                data-flashHasPriority="false" 
+                                data-firefoxUsesFlash="false" 
+                                data-autoplay="true" 
+                                data-width="958" 
+                                data-height="538" 
+                                data-poster="jackbox/img/video_poster.jpg" 
+                                data-href="jackbox/video/1.mp4"
+                                
+                            ></li>
+                            
+                            <li class="jackbox" 
+                            
+                            	data-group="video" 
+                                data-thumbnail="jackbox/img/thumbs/3a.jpg" 
+                                data-title="Flash w/ Mobile Backup" 
+                                data-description="#description_1" 
+                                data-flashHasPriority="true" 
+                                data-firefoxUsesFlash="false" 
+                                data-autoplay="true" 
+                                data-width="958" 
+                                data-height="538" 
+                                data-poster="jackbox/img/video_poster.jpg" 
+                                data-href="jackbox/video/1.mp4"
+                                
+                            ></li>
+                            
+                            <li class="jackbox" 
+                            
+                            	data-group="video" 
+                                data-thumbnail="jackbox/img/thumbs/4a.jpg" 
+                                data-title="HTML5/Flash Video" 
+                                data-description="#description_1" 
+                                data-flashHasPriority="false" 
+                                data-firefoxUsesFlash="false" 
+                                data-autoplay="true" 
+                                data-width="958" 
+                                data-height="538" 
+                                data-poster="jackbox/img/video_poster.jpg" 
+                                data-href="jackbox/video/1.mp4"
+                                
+                            ></li>
+                        
+                        </ul>
+                        
+                        <figcaption>HTML5/Flash Video<br /><a class="view-code" href="http://www.codingjack.com/jackbox/under_the_hood.html#local" target="_blank">view code</a></figcaption>
+                        
+                    </figure>
+                    
+                    <figure class="box">
+                    	
+                        <!-- data-audiotitle can be regular text or html -->
+                        <a class="jackbox" 
+                        
+                        	data-group="audio" 
+                            data-thumbnail="jackbox/img/thumbs/music.jpg" 
+                            data-title="HTML5/Flash Audio" 
+                            data-description="#description_1" 
+                            data-width="500" 
+                            data-height="185" 
+                            data-autoplay="true" 
+                            data-audiotitle="<a href='http://audiojungle.net/item/one-fine-day/109769' target='_blank'>Symphony-of-Specters - One Fine Day...</a>" 
+                            href="jackbox/music/1.mp3"
+                            
+                        ><!-- end opening tag -->
+                            
+                            <div class="jackbox-hover jackbox-hover-white jackbox-hover-play"><p>Optional Text</p></div><img src="jackbox/img/thumbs/3.jpg" width="180" height="150" alt="responsive lightbox" />
+                            
+                        </a>
+   						
+                        <ul class="jackbox-hidden-items">
+                        
+                        	<li class="jackbox"
+                            
+                                data-group="audio" 
+                                data-thumbnail="jackbox/img/thumbs/music.jpg" 
+                                data-title="HTML5/Flash Audio" 
+                                data-description="#description_1"  
+                                data-width="500" 
+                                data-height="185" 
+                                data-autoplay="true" 
+                                data-audiotitle="<a href='http://audiojungle.net/item/your-little-planet-corp/1324901' target='_blank'>MusicPremium - Little Planet Corp...</a>" 
+                                data-href="jackbox/music/1.mp3"
+                            
+                            ></li>
+                            
+                            <li class="jackbox"
+                            
+                                data-group="audio" 
+                                data-thumbnail="jackbox/img/thumbs/music.jpg" 
+                                data-title="HTML5/Flash Audio" 
+                                data-description="#description_1" 
+                                data-width="500" 
+                                data-height="185" 
+                                data-autoplay="true" 
+                                data-audiotitle="<a href='http://audiojungle.net/item/spring/1737665' target='_blank'>SilverSnow - Spring...</a>" 
+                                data-href="jackbox/music/1.mp3"
+                            
+                            ></li>
+                            
+                            <li class="jackbox"
+                            
+                                data-group="audio"
+                                data-thumbnail="jackbox/img/thumbs/music.jpg"  
+                                data-title="HTML5/Flash Audio" 
+                                data-description="#description_1" 
+                                data-width="500" 
+                                data-height="185" 
+                                data-autoplay="true" 
+                                data-audiotitle="<a href='http://audiojungle.net/item/soft-introduction/2849471' target='_blank'>Webarteo - Soft Introduction...</a>" 
+                                data-href="jackbox/music/1.mp3"
+                            
+                            ></li>
+                            
+                            <li class="jackbox"
+                            
+                                data-group="audio" 
+                                data-thumbnail="jackbox/img/thumbs/music.jpg" 
+                                data-title="HTML5/Flash Audio" 
+                                data-description="#description_1" 
+                                data-width="500" 
+                                data-height="185" 
+                                data-autoplay="true" 
+                                data-audiotitle="<a href='http://audiojungle.net/item/got-joy/2604169' target='_blank'>frozensatellite - Got Joy...</a>" 
+                                data-href="jackbox/music/1.mp3"
+                            
+                            ></li>
+                            
+                        </ul>
+                        
+                        <figcaption>HTML5/Flash Audio<br /><a class="view-code" href="http://www.codingjack.com/jackbox/under_the_hood.html#audio" target="_blank">view code</a></figcaption>
+                        
+                    </figure>
+					
+                    <figure class="box">
+                    
+                        <a class="jackbox" data-group="html" data-thumbnail="jackbox/img/thumbs/num1.jpg" data-title="HTML Content" data-width="640" href="#learn-more">
+                            
+                            <div class="jackbox-hover jackbox-hover-white jackbox-hover-document"></div><img src="jackbox/img/thumbs/4.jpg" width="180" height="150" alt="responsive lightbox" />
+                            
+                        </a>
+                        
+                        <ul class="jackbox-hidden-items">
+                        	
+                            <li class="jackbox" data-thumbnail="jackbox/img/thumbs/num2.jpg" data-group="html" data-title="iFrame" data-width="1100" data-description="#description_1" data-href="http://codecanyon.net/user/CodingJack"></li>
+
+                        	<li class="jackbox" 
+                            
+                            	data-group="html" 
+                                data-thumbnail="jackbox/img/thumbs/num3.jpg" 
+                                data-title="Google Maps" 
+                                data-description="#description_1" 
+                                data-href="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=brooklyn+pizza+534+North+4th+Avenue++Tucson,+AZ+85705&amp;aq=&amp;sll=32.228578,-110.965485&amp;sspn=0.008395,0.016512&amp;g=534+North+4th+Avenue++Tucson,+AZ+85705&amp;ie=UTF8&amp;hq=brooklyn+pizza&amp;hnear=534+N+4th+Ave,+Tucson,+Pima,+Arizona+85705&amp;t=m&amp;ll=32.233168,-110.971463&amp;spn=0.009801,0.020578&amp;z=16&amp;iwloc=A&amp;output=embed"></li>
+                            
+                        </ul>
+                        
+                        <figcaption>Raw HTML, Google Maps<br /><a class="view-code" href="http://www.codingjack.com/jackbox/under_the_hood.html#maps" target="_blank">view code</a></figcaption>
+                        
+                    </figure>
+                    
+                    <figure class="box">
+                    
+                        <a class="jackbox" data-group="swf" data-title="Flash SWF" data-description="#description_1" data-width="640" data-height="360" href="jackbox/swf/sample.swf">
+                            
+                            <div class="jackbox-tooltip"><p>Custom Tooltip</p></div><img src="jackbox/img/thumbs/2.jpg" width="180" height="150" alt="responsive lightbox" />
+                            
+                        </a>
+                        
+                        <figcaption>Flash SWF - Tooltip<br /><a class="view-code" href="http://www.codingjack.com/jackbox/under_the_hood.html#swf" target="_blank">view code</a></figcaption>
+                        
+                    </figure>
+                    
+                    <figure class="box">
+                    
+                        <a class="jackbox" data-group="mixed" data-thumbnail="jackbox/img/thumbs/1a.jpg" data-title="Item Title" data-description="#description_1" href="jackbox/img/photos/1.jpg">
+
+                            <img src="jackbox/img/thumbs/6.jpg" width="180" height="150" alt="responsive lightbox" />
+                            
+                        </a>
+
+                        <ul class="jackbox-hidden-items">
+                        
+                        	<li class="jackbox" data-group="mixed" data-title="Surrealist Dollhouse" data-description="#description_1" data-href="http://vimeo.com/17573879"></li>
+                            
+                            <li class="jackbox"
+                            
+                            	data-group="mixed" 
+                                data-thumbnail="jackbox/img/thumbs/2a.jpg" 
+                            	data-title="HTML5/Flash Video" 
+                                data-description="#description_1" 
+                                data-flashHasPriority="false" 
+                                data-autoplay="false" 
+                                data-width="958" 
+                                data-height="538" 
+                                data-poster="jackbox/img/video_poster.jpg" 
+                                data-href="jackbox/video/1.mp4"
+                                
+                            ></li>
+                            
+                            <li class="jackbox" 
+                        
+                                data-group="mixed" 
+                                data-thumbnail="jackbox/img/thumbs/3a.jpg" 
+                                data-title="HTML5/Flash Audio" 
+                                data-description="#description_1"  
+                                data-width="500" 
+                                data-height="185" 
+                                data-autoplay="false" 
+                                data-audiotitle="<a href='http://audiojungle.net/item/one-fine-day/109769' target='_blank'>Symphony-of-Specters - One Fine Day...</a>" 
+                                data-href="jackbox/music/1.mp3"
+                                
+                            ></li>
+                            
+                            <li class="jackbox" data-thumbnail="jackbox/img/thumbs/4a.jpg" data-group="mixed" data-title="HTML Content" data-width="640" data-href="#learn-more"></li>
+                            <li class="jackbox" data-thumbnail="jackbox/img/thumbs/5a.jpg" data-group="mixed" data-title="Flash SWF" data-description="#description_1" data-width="640" data-height="360" data-href="jackbox/swf/sample.swf"></li>
+
+                        </ul>
+                        
+                        <figcaption>Mixed - No Thumb Hover<br /><a class="view-code" href="http://www.codingjack.com/jackbox/under_the_hood.html#iframe" target="_blank">view code</a></figcaption>
+                        
+                    </figure>
+                    
+                </div>
+                                
+            </div>
+  
+		</div>
+        
+        <!-- Sample div used as an item's description, will only appear inside JackBox -->
+        <div class="jackbox-description" id="description_1">
+        
+        	<h3>Description Title</h3>
+            
+            <a href="#">Link</a> ipsum dolor sit amet, consectetur adipiscing elit. In est metus, tincidunt vitae eleifend sit amet, porta a sapien. Fusce in dolor nec purus facilisis dictum. tincidunt sed quam.
+            
+        </div>
+        
+        <!-- Content to be loaded as a JackBox item, will only appear inside JackBox -->
+        <div class="jackbox-html" id="learn-more">
+            
+            <!-- content should go inside this div -->        
+            <div>
+            
+                <h2>Mobile Ready + Unique Item Sharing</h2>
+                
+                <div><strong>JackBox was built with 2 goals in mind:</strong>
+                    
+                    <ol>
+                        <li>Create a lightbox that worked on mobile devices, even smartphones.<p>JackBox is "responsive", which means it's 100% compatible with responsive websites.</p></li>
+                        <li>Create a lightbox where every image, video and song can be individually shared.<p>This means when someone "likes" one of your photos, when a friend clicks on the shared link, they'll instantly be shown the exact photo that was originally shared.  So simple, yet you won't find this feature in most other lightboxes.</p></li>
+                        
+                    </ol>
+
+                </div>
+                
+           </div>
+           
+        </div>
+		
+       
+    </body>
+    
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

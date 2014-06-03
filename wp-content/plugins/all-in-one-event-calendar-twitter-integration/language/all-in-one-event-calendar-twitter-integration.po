@@ -1,0 +1,82 @@
+# Copyright (C) 2014 All-in-One Event Calendar Twitter Integration by Time.ly
+# This file is distributed under the same license as the All-in-One Event Calendar Twitter Integration by Time.ly package.
+msgid ""
+msgstr ""
+"Project-Id-Version: All-in-One Event Calendar Twitter Integration by Time.ly "
+"1.0.7\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/all-in-one-event-calendar-"
+"twitter-integration\n"
+"POT-Creation-Date: 2014-05-09 18:56:24+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2014-05-09 21:56+0300\n"
+"Last-Translator: Timely <support@time.ly>\n"
+"Language-Team:\n"
+
+#: all-in-one-event-calendar-twitter-integration.php:35
+msgid "All In One Event Calendar must be installed to activate extensions"
+msgstr "All In One Event Calendar must be installed to activate extensions"
+
+#: app/controller/ai1ecti.php:64 lib/oauth/oauth-provider-twitter.php:64
+msgid "Twitter"
+msgstr "Twitter"
+
+#: app/controller/ai1ecti.php:108
+msgid "Post To Twitter"
+msgstr "Post To Twitter"
+
+#: app/controller/ai1ecti.php:283
+msgid "Application Consumer Key:"
+msgstr "Application Consumer Key:"
+
+#: app/controller/ai1ecti.php:294
+msgid "Application Consumer Secret:"
+msgstr "Application Consumer Secret:"
+
+#: app/controller/ai1ecti.php:315
+msgid "Time to notification before event start:"
+msgstr "Time to notification before event start:"
+
+#: lib/command/twitter-oauth.php:23
+msgid "Authorization was rejected"
+msgstr "Authorization was rejected"
+
+#: lib/command/twitter-oauth.php:30
+msgid "Invalid callback"
+msgstr "Invalid callback"
+
+#: lib/command/twitter-oauth.php:41
+msgid "Provider unavailable"
+msgstr "Provider unavailable"
+
+#: lib/command/twitter-oauth.php:51
+msgid "Invalid workflow"
+msgstr "Invalid workflow"
+
+#: lib/html/element/setting/oauth_secret.php:27
+msgid ""
+"Follow <a href=\"%s\" target=\"_blank\">this link</a> to authorize this app "
+"to post to Twitter."
+msgstr ""
+"Follow <a href=\"%s\" target=\"_blank\">this link</a> to authorize this app "
+"to post to Twitter."
+
+#. Plugin Name of the plugin/theme
+msgid "All-in-One Event Calendar Twitter Integration by Time.ly"
+msgstr "All-in-One Event Calendar Twitter Integration by Time.ly"
+
+#. #-#-#-#-#  all-in-one-event-calendar-twitter-integration.pot (All-in-One Event Calendar Twitter Integration by Time.ly 1.0.7)  #-#-#-#-#
+#. Plugin URI of the plugin/theme
+#. #-#-#-#-#  all-in-one-event-calendar-twitter-integration.pot (All-in-One Event Calendar Twitter Integration by Time.ly 1.0.7)  #-#-#-#-#
+#. Author URI of the plugin/theme
+msgid "http://time.ly/"
+msgstr "http://time.ly/"
+
+#. Description of the plugin/theme
+msgid "The twitter integration for timely calendar"
+msgstr "The twitter integration for timely calendar"
+
+#. Author of the plugin/theme
+msgid "Time.ly Network Inc."
+msgstr "Time.ly Network Inc."

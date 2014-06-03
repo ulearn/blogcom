@@ -1,0 +1,201 @@
+::selection { background: #00B25A; color: #fff; text-shadow: none; }
+body {	 
+	background:#d3d6c3  url('http://www.ulearn.ie/blog/wp-content/themes/mistix/images/bg/bg10.png') !important;
+	color:#1e1e20;
+	font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	line-height: 1.65em;
+	letter-spacing: normal;
+}
+h1,h2,h3,h4,h5,h6{
+	font-family: Droid Sans !important;
+	line-height: 110%;
+}
+
+h1 { 	
+	color:#1e1e20;
+	font-size: 30px !important;
+	}
+	
+h2{ 	
+	color:#1e1e20;
+	font-size: 22px !important;
+	}
+
+h3 { 	
+	color:#1e1e20;
+	font-size: 20px !important;
+	}
+
+h4 { 	
+	color:#1e1e20;
+	font-size: 16px !important;
+	}	
+	
+h5 { 	
+	color:#1e1e20;
+	font-size: 14px !important;
+	}	
+
+h6 { 	
+	color:#1e1e20;
+	font-size: 12px !important;
+	}		
+a:hover {color: #00B25A;}
+
+/* ***********************
+--------------------------------------
+------------NIVO SLIDER----------
+--------------------------------------
+*********************** */
+.homeBox h2 a {color:#1e1e20;}
+.nivo-caption { 
+	background-image: url(images/mainContentPattern.png);
+	position:absolute; 
+	color: #1e1e20; 
+	font-size: 18px;
+	font-family: "Helvetica Neue", Arial, Helvetica, sans-serif; 
+	background-color:#fff;
+	background-color: rgba(255,255,255,0.5);
+	text-shadow:0 1px 0 rgba(255,255,255,0.6);
+
+	letter-spacing: normal;
+	padding:5px;
+	z-index:99;
+	top:15px;
+	left:15px;
+}
+
+
+
+.nivo-caption a { 
+	color: #1e1e20;  
+	text-decoration: underline; 
+}	
+
+.caption-content { padding:0px 0px 200px 0px; color:; font-size: ; font-family: "Helvetica Neue", Arial, Helvetica, sans-serif; text-shadow: 1px 1px 0px black; filter:alpha(opacity=50);letter-spacing: normal;}
+.caption-content h1{width:250px !important; background: rgba(0,178,90,0.5);  padding:10px ;text-align:center;  line-height:120%;}
+.caption-content h2 {	color:!important;
+						font-size:!important;
+						text-shadow: 1px 1px 0px black;}
+.caption-content p{ }
+.blogpostcategory h2 a, .textlink {font-family: Droid Sans !important;color:#1e1e20;}
+
+
+
+.caption-content h1{
+	color:!important;
+	font-size:!important;
+	text-shadow: 1px 1px 0px black;
+}
+
+.caption-content h2{
+	background: rgba(,,,0.5);  padding:10px ;text-align:center;  line-height:120%;
+}
+/* ***********************
+--------------------------------------
+------------MAIN COLOR----------
+--------------------------------------
+*********************** */
+
+.item h3 a:hover, .item2 h3 a:hover, .item4 h3 a:hover,.homeRacent h3:hover,.catlink:hover,.infotext span, .homeRacent h3 a:hover, .homeBox h2 a:hover,
+.blogpost .link:hover,.blogpost .postedin:hover ,.blogpost .postedin:hover, .blogpost .link a:hover,.blogpostcategory a.textlink:hover,
+.footer_widget .widget_links ul li a:hover, .footer_widget .widget_categories  ul li a:hover,  .footer_widget .widget_archive  ul li a:hover,
+#footerb .footernav ul li a:hover,.footer_widget  ul li a:hover,.tags span a:hover,.more-link:hover,.homeBox .one_third a,.showpostpostcontent h1 a:hover,
+.menu li ul li:hover a,.menu li a:hover strong,.menu li ul li:hover ul li a,.menu li ul li:hover ul li:hover a,.menu li ul li:hover ul li:hover ul li a,.menu li ul li:hover ul li:hover ul li:hover a,
+.menu > li.current-menu-item a strong,.menu > li.current-menu-ancestor a strong,.blogpostcategory .meta .written:hover a ,.blogpostcategory .meta .comments:hover a ,
+.blogpostcategory .meta .category:hover a,.blogpostcategory h2 a:hover,#wp-calendar a , .widgett a:hover ,.widget_categories li.current-cat a, .widget_categories li.current-cat, .blogpostcategory .meta .time a:hover, .error404 .postcontent h1
+{color:#00B25A !important;}
+
+
+/* ***********************
+--------------------------------------
+------------BOX COLOR----------
+--------------------------------------
+*********************** */
+#header, #nslider-wrapper,#remove ,#footer,.homeRacent h3, #homeRecent .one_fourth, .item h3, .item4 h3, .item h3 a, .item4 h3 a ,.item ,.item4,.homewrap .homesingleleft,.homewrap .homesingleright,.projectdetails,
+.projectdescription, .widget
+{background-image: url(images/mainContentPattern.png); background:#f4f5eb}
+.homeRacent h3 a, .item h3, .item4 h3, .item h3 a, .item4 h3 a {color:#1e1e20;}
+#remove a {color:#1e1e20;}
+
+/* ***********************
+--------------------------------------
+------------MAIN COLOR BOXED----------
+--------------------------------------
+*********************** */
+#footerbwrap,.catlinkhover,#contactform  .contactbutton .contact-button:hover,#commentform #respond #commentform input#commentSubmit:hover, #respond #commentform input#commentSubmit:hover
+{background:#00B25A;  background-image: url(images/mainContentPattern.png);color:#1e1e20;}
+
+ .catlinkhover, #remove a:hover,.wp-pagenavi a:hover, .wp-pagenavi span.current {color:#1e1e20 !important;background:#00B25A;  background-image: url(images/mainContentPattern.png);}
+/* ***********************
+--------------------------------------
+------------MAIN BORDER COLOR----------
+--------------------------------------
+*********************** */
+#header, .recentborder,.item4 .recentborder, .item .recentborder,.afterlinehome,.prelinehome{border-color:#00B25A !important;}
+
+.homeRacent .overLowerDefault,.item .overLowerDefault,.item4 .overLowerDefault{ 	
+	border-left:5px solid #00B25A;
+	border-right:5px solid #00B25A;
+}
+/* ***********************
+--------------------------------------
+------------BODY COLOR----------
+--------------------------------------
+*********************** */
+
+.blogpost .link a,.datecomment span,.homesingleleft .tags a,.homesingleleft .postedin a,.blogpostcategory .category a,.blogpostcategory .comments a,
+.blogpostcategory a.textlink ,.written a, .blogpostcategory .meta .time a	
+{ color:#1e1e20}
+
+
+/* ***********************
+--------------------------------------
+------------MENU----------
+--------------------------------------
+*********************** */
+
+.menu li:hover ul {border-bottom: 1px solid #00B25A; border-left: 1px solid #00B25A; border-right: 1px solid #00B25A;}
+.menu li ul li a{	font-family: "Helvetica Neue", Arial, Helvetica, sans-serif !important; }
+.menu > li a {	font-family: Droid Sans !important; color:#2e2d2d !important;letter-spacing: normal;}
+.menu a span{ 	font-family: "Helvetica Neue", Arial, Helvetica, sans-serif; color:#aaa !important;letter-spacing: normal;}
+#1e1e20
+/* ***********************
+--------------------------------------
+------------BLOG----------
+-----------------------------------*/
+.blogpostcategory h2 {line-height: 110% !important;}
+.wp-pagenavi span.pages {font-family: Droid Sans !important;}
+.wp-pagenavi a, .showpostpostcontent h1 a {color:#1e1e20;}
+.wp-pagenavi a:hover, ul.tabs a.current, ul.tabs a:hover, h2.trigger:hover { color:#00B25A; }
+.blogpost .datecomment a, .tags a, .related h4 a, .content ol.commentlist li .comment-author .fn a, .content ol.commentlist li .reply a {color:#1e1e20;}
+.blogpost .datecomment a:hover, .tags a:hover, .related h4 a:hover, .content ol.commentlist li .comment-author .fn a:hover, .content ol.commentlist li .reply a:hover { color:#00B25A; }
+.content ol.commentlist li .reply a, .comment-author .fn a{font-family: Droid Sans !important;}
+.image-gallery, .gallery-item { border: 1px dashed #00B25A;}
+
+/* ***********************
+--------------------------------------
+------------Widget----------
+-----------------------------------*/
+.wttitle a {color:#1e1e20;}
+.widget{border-top:5px solid #00B25A;border-bottom:1px solid #CFCFCF;}
+.widgetline{}
+.widgett a:hover, .widget_nav_menu ul li a:hover{color:#00B25A !important;}
+.item h4, .item2 h4, .item4 h4{	font-family: "Helvetica Neue", Arial, Helvetica, sans-serif !important; }
+.related h4{	font-family: "Helvetica Neue", Arial, Helvetica, sans-serif !important; }
+.widget_search form div {	font-family: "Helvetica Neue", Arial, Helvetica, sans-serif !important;}
+.widgett a {	font-family: "Helvetica Neue", Arial, Helvetica, sans-serif !important;}
+.widget_tag_cloud a{	font-family: "Helvetica Neue", Arial, Helvetica, sans-serif !important;}
+
+
+
+/* ***********************
+--------------------------------------
+------------BUTTONS WITH SHORTCODES----------
+--------------------------------------
+*********************** */
+
+.button_purche_right_top,.button_download_right_top,.button_search_right_top {font-family: Droid Sans !important;color:#1e1e20;text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);}
+.button_purche:hover,.button_download:hover,.button_search:hover {color:#00B25A !important;}
+.ribbon_center_red a, .ribbon_center_blue a, .ribbon_center_white a, .ribbon_center_yellow a, .ribbon_center_green a {font-family: Droid Sans !important;}

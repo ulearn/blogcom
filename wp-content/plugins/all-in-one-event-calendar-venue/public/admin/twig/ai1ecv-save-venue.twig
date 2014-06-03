@@ -1,0 +1,9 @@
+{% from 'form-elements/input.twig' import input %}
+<tr>
+    <td colspan="2">
+        <label for="{{ checkbox.id }}">           
+            {{ input( checkbox.id, checkbox.id, 1, 'checkbox', checkbox.attributes ) }}            
+            {{ save_venue_title }}
+        </label>
+    </td>
+</tr>

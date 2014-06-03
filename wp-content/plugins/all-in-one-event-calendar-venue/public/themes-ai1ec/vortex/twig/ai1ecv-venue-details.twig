@@ -1,0 +1,124 @@
+<div class="ai1ec-modal-header {% if image %}ai1ec-with-venue-image{% endif %}"
+	{% if image %}
+		style="background-image: url({{ image | e('html_attr') }});"
+	{% endif %}
+	>
+	<div class="ai1ec-title-shading"></div>
+	<div class="ai1ec-modal-header-inner">
+		<button type="button" class="ai1ec-close" data-dismiss="ai1ec-modal">×</button>
+		<h2>{{ name }}</h2>
+	</div>
+</div>
+
+<div class="ai1ec-modal-body">
+
+	<div class="ai1ec-row">
+		<div class="ai1ec-col-sm-6 ai1ec-col-sm-push-6">
+			{% if map_address is not empty %}
+				<div id="ai1ecv_map_container"
+					data-address="{{ map_address | e('html_attr') }}"></div>
+			{% endif %}
+
+			<ul class="ai1ec-fa-ul">
+				{% if address is not empty %}
+					<li>
+						<i class="ai1ec-fa ai1ec-fa-li ai1ec-fa-map-marker"></i>
+						<address>
+							<strong>{{ name }}</strong><br>
+							{# As in event-single.twig, address should have <br>s already,
+								so output raw. #}
+							{{ address | raw }}
+						</address>
+					</li>
+				{% endif  %}
+
+				{% if contact_name is not empty %}
+					<li>
+						<i class="ai1ec-fa ai1ec-fa-li ai1ec-fa-user"></i>
+						<address>
+							<strong>{{ 'Contact:' | __ }}</strong> {{ contact_name }}
+						</address>
+					</li>
+				{% endif  %}
+
+				{% if email is not empty %}
+					<li>
+						<i class="ai1ec-fa ai1ec-fa-envelope ai1ec-fa-li"></i>
+						<address>
+							<a href="mailto:{{ email | e('html_attr') }}">
+								{{ email }}
+							</a>
+						</address>
+					</li>
+				{% endif %}
+
+				{% if phone is not empty %}
+					<li>
+						<i class="ai1ec-fa ai1ec-fa-li ai1ec-fa-phone"></i>
+						<address>
+							{{ phone }}
+						</address>
+					</li>
+				{% endif  %}
+			</ul>
+
+		</div>
+		<div class="ai1ec-col-sm-6 ai1ec-col-sm-pull-6">
+
+			{% if description is not empty %}
+				<p>{{ description }}</p>
+			{% endif %}
+
+			{% if capacity is not empty or handicap is not empty or parking is not empty %}
+				<div class="ai1ec-alert ai1ec-alert-info">
+					<ul class="ai1ec-fa-ul">
+
+						{% if capacity is not empty %}
+							<li>
+								<i class="ai1ec-fa ai1ec-fa-li ai1ec-fa-users"></i>
+								{{ 'Seating capacity:' | __ }} {{ capacity }}
+							</li>
+						{% endif  %}
+
+						{% if handicap is not empty %}
+							<li>
+								<i class="ai1ec-fa ai1ec-fa-li ai1ec-fa-wheelchair"></i>
+								{{ 'Handicap accessible' | __ }}
+							</li>
+						{% endif %}
+
+						{% if parking is not empty %}
+							<li>
+								<i class="ai1ec-fa ai1ec-fa-li ai1ec-fa-truck"></i>
+								{{ 'Parking:' | __ }} {{ parking }}
+							</li>
+						{% endif %}
+
+					</ul>
+				</div>
+			{% endif %}
+
+		</div>
+	</div>
+
+</div>
+
+{% if email is not empty or url is not empty %}
+	<div class="ai1ec-modal-footer ai1ec-text-center">
+		{% if email is not empty %}
+			<a href="mailto:{{ email | e('html_attr') }}"
+				class="ai1ec-btn ai1ec-btn-info ai1ec-btn-lg">
+				<i class="ai1ec-fa ai1ec-fa-envelope ai1ec-fa-fw"></i>
+				{{ 'Email Venue' | __ }}
+			</a>
+		{% endif %}
+
+		{% if url is not empty %}
+			<a href="{{ url }}" target="_blank"
+				class="ai1ec-btn ai1ec-btn-info ai1ec-btn-lg">
+				<i class="ai1ec-fa ai1ec-fa-link ai1ec-fa-fw"></i>
+				{{ 'Visit Website' | __ }}
+			</a>
+		{% endif %}
+	</div>
+{% endif %}

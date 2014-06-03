@@ -1,0 +1,72 @@
+# Copyright (C) 2014 All-in-One Event Calendar CSV Feed by Time.ly
+# This file is distributed under the same license as the All-in-One Event Calendar CSV Feed by Time.ly package.
+msgid ""
+msgstr ""
+"Project-Id-Version: All-in-One Event Calendar CSV Feed by Time.ly 1.0.2\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/all-in-one-event-calendar-csv-"
+"feed\n"
+"POT-Creation-Date: 2014-04-29 18:58:39+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2014-04-29 21:58+0300\n"
+"Last-Translator: Timely <support@time.ly>\n"
+"Language-Team:\n"
+
+#: all-in-one-event-calendar-csv-feed.php:40
+msgid "All In One Event Calendar must be installed to activate extensions"
+msgstr "All In One Event Calendar must be installed to activate extensions"
+
+#: app/controller/ai1eccf.php:20
+msgid "CSV Feed - License Key"
+msgstr "CSV Feed - License Key"
+
+#: lib/calendar-feeds/csv.php:64
+msgid "CSV"
+msgstr "CSV"
+
+#: lib/calendar-feeds/csv.php:89
+msgid "Submit Events"
+msgstr "Submit Events"
+
+#: lib/calendar-feeds/csv.php:105
+msgid "Categories (optional)"
+msgstr "Categories (optional)"
+
+#: lib/calendar-feeds/csv.php:119
+msgid "No events were found"
+msgstr "No events were found"
+
+#: lib/calendar-feeds/csv.php:122
+msgid "Imported %s event"
+msgid_plural "Imported %s events"
+msgstr[0] "Imported %s event"
+msgstr[1] "Imported %s events"
+
+#: lib/calendar-feeds/csv.php:280
+msgid "textarea_import"
+msgstr "textarea_import"
+
+#. Plugin Name of the plugin/theme
+msgid "All-in-One Event Calendar CSV Feed by Time.ly"
+msgstr "All-in-One Event Calendar CSV Feed by Time.ly"
+
+#. Plugin URI of the plugin/theme
+msgid "http://time.ly/extension/csv-feed"
+msgstr "http://time.ly/extension/csv-feed"
+
+#. Description of the plugin/theme
+msgid ""
+"Famous All-in-One Event Calendar extension giving you possibility to import "
+"CSV feeds of events"
+msgstr ""
+"Famous All-in-One Event Calendar extension giving you possibility to import "
+"CSV feeds of events"
+
+#. Author of the plugin/theme
+msgid "Time.ly Network Inc."
+msgstr "Time.ly Network Inc."
+
+#. Author URI of the plugin/theme
+msgid "http://time.ly/"
+msgstr "http://time.ly/"

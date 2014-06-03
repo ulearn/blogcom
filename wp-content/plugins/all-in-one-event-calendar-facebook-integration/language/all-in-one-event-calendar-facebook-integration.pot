@@ -1,0 +1,461 @@
+# Copyright (C) 2014 All-in-One Event Calendar Facebook Integration by Time.ly
+# This file is distributed under the same license as the All-in-One Event Calendar Facebook Integration by Time.ly package.
+msgid ""
+msgstr ""
+"Project-Id-Version: All-in-One Event Calendar Facebook Integration by Time."
+"ly 1.1.2\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/all-in-one-event-calendar-"
+"facebook-integration\n"
+"POT-Creation-Date: 2014-05-27 16:04:48+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2014-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: all-in-one-event-calendar-facebook-integration.php:36
+msgid "All In One Event Calendar must be installed to activate extensions"
+msgstr ""
+
+#: all-in-one-event-calendar-facebook-integration.php:50
+msgid ""
+"Could not activate the Facebook Connect add-on: All-in-One Event Calendar "
+"version %s or higher is required."
+msgstr ""
+
+#: app/controller/ai1ecfi.php:47
+msgid "Facebook License Key"
+msgstr ""
+
+#: app/controller/ai1ecfi.php:55
+msgid "Facebook"
+msgstr ""
+
+#: app/controller/ai1ecfi.php:74
+msgid "Include <strong>private</strong> events when importing from Facebook"
+msgstr ""
+
+#: app/controller/ai1ecfi.php:88
+msgid "Include <strong>declined</strong> events when importing from Facebook"
+msgstr ""
+
+#: app/controller/ai1ecfi.php:102
+msgid "Import events from Facebook as <strong>pending</strong> events"
+msgstr ""
+
+#: lib/calendar-feeds/facebook.php:118
+msgid "Facebook Feeds"
+msgstr ""
+
+#: lib/calendar-feeds/facebook.php:384
+msgid "Something went wrong when deleting the option"
+msgstr ""
+
+#: lib/calendar-feeds/facebook.php:434
+msgid "You unsubscribed from %s. "
+msgstr ""
+
+#: lib/calendar-feeds/facebook.php:436
+msgid "%d event was deleted"
+msgid_plural "%d events were deleted."
+msgstr[0] ""
+msgstr[1] ""
+
+#: lib/calendar-feeds/facebook.php:522
+msgid "All-in-One Event Calendar Facebook Import Notice"
+msgstr ""
+
+#: lib/calendar-feeds/facebook.php:523
+msgid ""
+"Something went wrong while syncing events from Facebook. Please check that "
+"your Access Token is still valid by visiting the <strong>Events</strong> "
+"&gt; <strong>Calendar Feeds</strong> screen."
+msgstr ""
+
+#: lib/calendar-feeds/facebook.php:615
+msgid ""
+"Something went wrong with Facebook authentication, try to log out and then "
+"login again"
+msgstr ""
+
+#: lib/calendar-feeds/facebook.php:618
+msgid ""
+"Something went wrong when retrieving data from Facebook. Try subscribing to "
+"fewer users or try logging off and logging in again."
+msgstr ""
+
+#: lib/calendar-feeds/facebook.php:919
+msgid "Fetching data for %s has completed succesfully"
+msgstr ""
+
+#: lib/calendar-feeds/facebook.php:1095
+msgid ""
+"Something went wrong with Facebook authentication. Try to log out and then "
+"log in again."
+msgstr ""
+
+#: lib/calendar-feeds/facebook.php:1099
+msgid ""
+"Something went wrong when retrieving data from Facebook. Try subscribing to "
+"fewer calendars."
+msgstr ""
+
+#: lib/calendar-feeds/facebook.php:1180
+msgid "View associated Facebook event"
+msgstr ""
+
+#: lib/calendar-feeds/facebook.php:1189
+msgid ""
+"Would you like to delete the associated Facebook event or keep it? If you "
+"choose to keep it and later you export this event again, a new one will be "
+"created."
+msgstr ""
+
+#: lib/calendar-feeds/facebook.php:1194
+msgid "Unpublish Facebook event?"
+msgstr ""
+
+#: lib/calendar-feeds/facebook.php:1196
+msgid "Delete event"
+msgstr ""
+
+#: lib/calendar-feeds/facebook.php:1197
+msgid "Keep event"
+msgstr ""
+
+#: lib/calendar-feeds/facebook.php:1217
+msgid "Export event to Facebook"
+msgstr ""
+
+#: lib/calendar-feeds/facebook.php:1259 lib/calendar-feeds/facebook.php:1345
+msgid "All-in-One Event Calendar Facebook Import Error"
+msgstr ""
+
+#: lib/calendar-feeds/facebook.php:1260
+msgid ""
+"We couldn't synchronize data with Facebook as we don't have a valid access "
+"token. Try to log out of Facebook from the <strong>Events</strong> &gt; "
+"<strong>Calendar Feeds</strong> screen, then log in again."
+msgstr ""
+
+#: lib/calendar-feeds/facebook.php:1346
+msgid ""
+"We couldn't delete data from Facebook as we don't have a valid access token. "
+"Try to log out of Facebook from the <strong>Events</strong> &gt; "
+"<strong>Calendar Feeds</strong> screen, then log in again."
+msgstr ""
+
+#: lib/legacy/facebook/class-ai1ec-facebook-custom-bulk-action.php:27
+msgid "Show all events"
+msgstr ""
+
+#: lib/legacy/facebook/class-ai1ec-facebook-custom-bulk-action.php:28
+msgid "Show only events imported from Facebook"
+msgstr ""
+
+#: lib/legacy/facebook/class-ai1ec-facebook-custom-bulk-action.php:29
+msgid "Show only events exported to Facebook"
+msgstr ""
+
+#: lib/legacy/facebook/class-ai1ec-facebook-custom-bulk-action.php:30
+msgid "Show only events that can be exported to Facebook"
+msgstr ""
+
+#: lib/legacy/facebook/class-ai1ec-facebook-custom-bulk-action.php:120
+msgid "All-in-One Event Calendar Facebook Export Error"
+msgstr ""
+
+#: lib/legacy/facebook/class-ai1ec-facebook-custom-bulk-action.php:121
+msgid ""
+"We couldn't export data to Facebook as we don't have a valid access token. "
+"Try to log out of Facebook from the <strong>Events</strong> &gt; "
+"<strong>Calendar Feeds</strong> screen, then log in again."
+msgstr ""
+
+#: lib/legacy/facebook/class-ai1ec-facebook-event.php:456
+msgid "All-in-One Event Calendar Facebook Event Creation Error"
+msgstr ""
+
+#: lib/legacy/facebook/class-ai1ec-facebook-event.php:457
+msgid "Something went wrong while creating the event on Facebook."
+msgstr ""
+
+#: lib/legacy/facebook/class-ai1ec-facebook-event.php:461
+msgid ""
+"You didn't enter a valid date. Remember that only events which end in the "
+"future can be exported to Facebook."
+msgstr ""
+
+#: lib/legacy/facebook/class-ai1ec-facebook-event.php:463
+msgid ""
+"If you are trying to create an event for a page, try refreshing the access "
+"Tokens. This is the error message: "
+msgstr ""
+
+#: lib/legacy/facebook/class-ai1ec-facebook-event.php:465
+msgid "This is the error message: "
+msgstr ""
+
+#: lib/legacy/facebook/class-ai1ec-facebook-event.php:482
+msgid "All-in-One Event Calendar Facebook Event Update Error"
+msgstr ""
+
+#: lib/legacy/facebook/class-ai1ec-facebook-event.php:483
+msgid "Something went wrong while updating the event on Facebook."
+msgstr ""
+
+#: lib/legacy/facebook/class-ai1ec-facebook-event.php:506
+msgid "All-in-One Event Calendar Facebook Event Deletion Error"
+msgstr ""
+
+#: lib/legacy/facebook/class-ai1ec-facebook-event.php:507
+msgid "Something went wrong while deleting the event from Facebook."
+msgstr ""
+
+#: lib/legacy/facebook/class-ai1ec-facebook-graph-object-collection.php:162
+msgid "Friends"
+msgstr ""
+
+#: lib/legacy/facebook/class-ai1ec-facebook-graph-object-collection.php:164
+msgid "Pages"
+msgstr ""
+
+#: lib/legacy/facebook/class-ai1ec-facebook-graph-object-collection.php:166
+msgid "Groups"
+msgstr ""
+
+#: lib/legacy/facebook/class-ai1ec-facebook-graph-object-collection.php:385
+msgid "An error message occurred when saving %s data to the db"
+msgstr ""
+
+#: lib/legacy/facebook/class-ai1ec-facebook-graph-object-collection.php:614
+msgid "Could not save a new event during Facebook import."
+msgstr ""
+
+#: lib/legacy/facebook/class-ai1ec-facebook-graph-object-collection.php:827
+msgid "Could not update an event post during Facebook import."
+msgstr ""
+
+#: lib/legacy/facebook/class-ai1ec-facebook-tab.php:37
+#: lib/legacy/facebook/class-ai1ec-facebook-tab.php:92
+msgid "How do I use Facebook import?"
+msgstr ""
+
+#: lib/legacy/facebook/class-ai1ec-facebook-tab.php:63
+msgid "Nothing to display"
+msgstr ""
+
+#: lib/legacy/facebook/class-ai1ec-facebook-tab.php:124
+msgid "Save"
+msgstr ""
+
+#: lib/legacy/facebook/class-ai1ec-facebook-tab.php:125
+msgid "Facebook Configuration"
+msgstr ""
+
+#: lib/legacy/facebook/class-ai1ec-facebook-tab.php:228
+msgid "Syncing events for %s."
+msgstr ""
+
+#: lib/legacy/facebook/class-ai1ec-facebook-tab.php:229
+msgid ""
+"Something went wrong while updating events, but some events might still be "
+"updated / inserted correctly"
+msgstr ""
+
+#: lib/legacy/facebook/class-ai1ec-facebook-tab.php:230
+msgid " %d event was updated."
+msgid_plural " %d events were updated."
+msgstr[0] ""
+msgstr[1] ""
+
+#: lib/legacy/facebook/class-ai1ec-facebook-tab.php:231
+msgid " %d event was added."
+msgid_plural " %d events were added."
+msgstr[0] ""
+msgstr[1] ""
+
+#: lib/legacy/facebook/class-ai1ec-facebook-tab.php:232
+msgid " %d event was deleted."
+msgid_plural " %d events were deleted."
+msgstr[0] ""
+msgstr[1] ""
+
+#: lib/legacy/facebook/class-ai1ec-facebook-tab.php:234
+msgid " No events to add or update."
+msgstr ""
+
+#: lib/legacy/facebook/class-ai1ec-facebook-tab.php:279
+msgid "Event category: "
+msgstr ""
+
+#: lib/legacy/facebook/class-ai1ec-facebook-tab.php:284
+msgid "Tag with: "
+msgstr ""
+
+#: lib/legacy/facebook/class-ai1ec-facebook-tab.php:288
+msgid "Allow comments"
+msgstr ""
+
+#: lib/legacy/facebook/class-ai1ec-facebook-tab.php:291
+#: lib/legacy/facebook/class-ai1ec-facebook-tab.php:298
+msgid "Yes"
+msgstr ""
+
+#: lib/legacy/facebook/class-ai1ec-facebook-tab.php:292
+#: lib/legacy/facebook/class-ai1ec-facebook-tab.php:299
+msgid "No"
+msgstr ""
+
+#: lib/legacy/facebook/class-ai1ec-facebook-tab.php:295
+msgid "Show map"
+msgstr ""
+
+#: lib/legacy/facebook/class-ai1ec-facebook-tab.php:317
+msgid "No subscriptions yet."
+msgstr ""
+
+#: lib/legacy/facebook/class-ai1ec-facebook-tab.php:328
+msgid "Refresh these events"
+msgstr ""
+
+#: lib/legacy/facebook/class-ai1ec-facebook-tab.php:329
+msgid "Unsubscribe from these events"
+msgstr ""
+
+#: lib/legacy/facebook/class-ai1ec-facebook-tab.php:393
+msgid "Profile image"
+msgstr ""
+
+#: lib/legacy/facebook/class-ai1ec-facebook-tab.php:394
+msgid "Hi, you are signed in as:"
+msgstr ""
+
+#: lib/legacy/facebook/class-ai1ec-facebook-tab.php:397
+msgid " Refresh"
+msgstr ""
+
+#: lib/legacy/facebook/class-ai1ec-facebook-tab.php:398
+msgid " Unsubscribe"
+msgstr ""
+
+#: lib/legacy/facebook/class-ai1ec-facebook-tab.php:399
+msgid "Refresh my events"
+msgstr ""
+
+#: lib/legacy/facebook/class-ai1ec-facebook-tab.php:400
+msgid "Unsubscribe from my events"
+msgstr ""
+
+#: lib/legacy/facebook/class-ai1ec-facebook-tab.php:441
+msgid "Sign out of Facebook"
+msgstr ""
+
+#: lib/legacy/facebook/class-ai1ec-facebook-tab.php:442
+msgid "Subscribe to your events"
+msgstr ""
+
+#: lib/legacy/facebook/class-ai1ec-facebook-tab.php:480
+msgid "Choose a category"
+msgstr ""
+
+#: lib/legacy/facebook/class-ai1ec-facebook-tab.php:508
+msgid "Categories (optional)"
+msgstr ""
+
+#: lib/legacy/facebook/class-ai1ec-facebook-tab.php:519
+msgid "Event category"
+msgstr ""
+
+#: lib/legacy/facebook/class-ai1ec-facebook-tab.php:520
+msgid "Tag with"
+msgstr ""
+
+#: lib/legacy/facebook/class-ai1ec-facebook-tab.php:521
+msgid "Refresh list"
+msgstr ""
+
+#: lib/legacy/facebook/class-ai1ec-facebook-tab.php:522
+msgid "Subscribe to more events"
+msgstr ""
+
+#: lib/legacy/facebook/class-ai1ec-facebook-tab.php:524
+msgid ""
+"You can subscribe to the shared calendars of friends, pages, and groups you "
+"are connected with. Select those calendars you're interested in below."
+msgstr ""
+
+#: lib/legacy/facebook/class-ai1ec-facebook-tab.php:546
+msgid "Subscribe to selected"
+msgstr ""
+
+#: lib/legacy/facebook/class-ai1ec-facebook-tab.php:547
+msgid "Allow comments on imported events"
+msgstr ""
+
+#: lib/legacy/facebook/class-ai1ec-facebook-tab.php:548
+msgid "Show map on imported events"
+msgstr ""
+
+#: lib/legacy/facebook/class-ai1ec-facebook-tab.php:606
+msgid "Keep Events"
+msgstr ""
+
+#: lib/legacy/facebook/class-ai1ec-facebook-tab.php:607
+msgid "Remove Events"
+msgstr ""
+
+#: lib/legacy/facebook/class-ai1ec-facebook-tab.php:608
+msgid ""
+"Would you like to remove these events from your calendar, or preserve them?"
+msgstr ""
+
+#: lib/legacy/facebook/class-ai1ec-facebook-tab.php:609
+msgid "Removing the following subscription: "
+msgstr ""
+
+#: lib/legacy/factory/class-ai1ec-facebook-factory.php:76
+msgid "Create event for:"
+msgstr ""
+
+#: lib/legacy/factory/class-ai1ec-facebook-factory.php:113
+msgid "Refresh list of pages"
+msgstr ""
+
+#: lib/legacy/factory/class-ai1ec-facebook-factory.php:118
+msgid "Refreshing…"
+msgstr ""
+
+#: lib/legacy/time/class-ai1ec-time-utility.php:345
+msgid "GMT%+d:%02d"
+msgstr ""
+
+#: public/admin/plugins/facebook/user_login.php:2
+msgid "Click below to connect your calendar to Facebook."
+msgstr ""
+
+#: public/admin/plugins/facebook/user_login.php:7
+msgid "Connect to Facebook"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "All-in-One Event Calendar Facebook Integration by Time.ly"
+msgstr ""
+
+#. #-#-#-#-#  all-in-one-event-calendar-facebook-integration.pot (All-in-One Event Calendar Facebook Integration by Time.ly 1.1.2)  #-#-#-#-#
+#. Plugin URI of the plugin/theme
+#. #-#-#-#-#  all-in-one-event-calendar-facebook-integration.pot (All-in-One Event Calendar Facebook Integration by Time.ly 1.1.2)  #-#-#-#-#
+#. Author URI of the plugin/theme
+msgid "http://time.ly/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"<a href=\"https://www.facebook.com\" target=\"_blank\" alt=\"Facebook, a "
+"social network\">Facebook</a> integration for All-in-One Event Calendar"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Time.ly Network Inc."
+msgstr ""

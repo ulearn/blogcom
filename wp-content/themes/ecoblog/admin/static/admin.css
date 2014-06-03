@@ -1,0 +1,171 @@
+/* iDesignEco, 2010 */
+
+#ide_admin {
+	background: #f4f4f4;
+	padding: 15px;
+	line-height: 30px;	
+}
+#ide_admin h1, #ide_admin h2, #ide_admin h3 {
+	font-family: 'Myriad Pro', 'Trebuchet MS', Helvetica, Arial;
+}  
+
+#ide_admin .left {
+	width: 70%;
+	float: left;
+}
+
+#ide_admin .right {
+	width: 28%;
+	float: right;
+}
+	
+	
+/* ________________________________________________________ */
+	
+#ide_admin .news {
+	margin-top: 20px;
+}
+	
+/* ________________________________________________________ */
+
+#ide_admin .ide_title {
+	font-size: 30px;
+	margin: 0 0 30px 0;
+}
+
+
+#ide_admin label {
+	width: 35%;
+	margin-right: 15px;
+	display: block;
+	float: left;
+}
+
+#ide_admin .tips li {
+	margin-bottom: 15px;
+}
+
+#ide_admin #ecovideo {
+	display: none;
+}
+	#ide_admin #ecovideo iframe {
+		width: 100%;
+		height: 400px;
+		margin: 20px 0 20px 0;
+		text-align: center;
+		overflow: hidden;
+	}
+
+#ide_admin .updated {
+	margin: 20px 0 20px 0;
+	padding: 5px;
+	font-size: 11px;
+	line-height: 16px;
+}
+
+
+/* ________________________________________________________ */
+
+#ide_admin .ide_form {
+	margin: -1px 0 0 0;
+	
+	background: #fff url('form.png') repeat-x;
+	background-position: bottom left;
+		
+	padding: 15px;
+	
+	border-radius: 5px;
+	-border-radius: 5px;
+	-khtml-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	
+	border: 1px solid #C2DF87;
+	
+	overflow: hidden;
+}
+
+
+#ide_admin  .ide_form br {
+	clear: both;
+}
+#ide_admin  .ide_form .field {
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+	clear: both;
+	border-bottom: 1px dotted #e3e3e3;
+}
+#ide_admin  .ide_form .error {
+	margin: 0;
+	color: #C40548;
+	font-weight: bold;
+}
+#ide_admin .ide_form .regular-text, #ide_admin .ide_form select {
+	width: 60%;
+}
+#ide_admin .ide_form .multi {
+	height: 150px;
+}
+#ide_admin .ide_form textarea {
+	width: 60%;
+	height: 100px;
+}
+#ide_admin .ide_form .msg {
+	font-size: 18px;
+	color: #659700;
+}
+#ide_admin .ide_form .info {
+	margin-left: 37%;
+	display: block;
+	font-size: 11px;
+	color: #a1a1a1;
+}
+
+
+#ide_admin h2 {
+	margin: 0 0 10px 0;
+}
+
+#ide_admin .tabs {
+	margin: 0 0 0 15px;
+	padding: 0 !important;
+	overflow: hidden;
+}
+
+#ide_admin .tabs li {
+	float: left;
+	margin: 0 3px 0 0;
+}
+	#ide_admin .tabs a {
+		background: #659700;
+		display: block;
+		padding: 8px 12px 8px 12px;
+		text-decoration: none;
+		font-family: Helvetica, Arial, serif;
+		font-size: 16px;
+		font-weight: bold;
+		color: #fff;
+
+		border-width: 1px 1px 0 1px;
+		border-style: solid;
+		border-color: #659700;
+
+		border-radius: 5px 5px 0 0;
+		-border-radius: 5px 5px 0 0;
+		-khtml-border-radius: 5px 5px 0 0;
+		-moz-border-radius: 5px 5px 0 0;
+		-webkit-border-radius: 5px 5px 0 0;
+	}
+	#ide_admin .tabs .sel a {
+		background: #fff url('tab.png') repeat-x;
+		background-position: 0 2px;
+		border-color: #C2DF87;
+		color: #659700;
+	}
+
+
+#ide_admin .clear {
+	clear: both;
+	height: 1px;
+	overflow: hidden;
+}

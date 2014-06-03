@@ -1,0 +1,11 @@
+{% from 'form-elements/select.twig' import select %}
+<tr>
+    <td class="ai1ec-first">
+        <label for="{{ select.id }}">
+            {{ select_venue_title }}
+        </label>
+    </td>
+    <td>
+        {{ select( select.id, select.id, select.args, select.options ) }}
+    </td>
+</tr>

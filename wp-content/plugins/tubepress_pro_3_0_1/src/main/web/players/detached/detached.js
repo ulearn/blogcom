@@ -1,0 +1,1 @@
+(function(c,i){var a="detached",d=i.Beacon.subscribe,f="tubepress.players.",b="#tubepress_detached_player_",e=i.Ajax.LoadStyler,g=function(p,m,k,l,o,n){if(m!==a){return}var j=b+n;e.applyLoadingStyle(j);c(j)[0].scrollIntoView(true)},h=function(n,l,p,m,q,j,o,r){if(l!==a){return}var k=b+r;c(k).html(m);e.removeLoadingStyle(k)};d(f+"invoke",g);d(f+"populate",h)}(jQuery,TubePress));

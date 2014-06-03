@@ -1,0 +1,20 @@
+Hi, and thanks for purchasing JackBox :)
+
+Before getting started, be sure to check out the "special notes" section in the help document. 
+
+Here's a breakdown of the folders:
+
+1) bonuses: The JackBoxFX and stand-alone video player.  These files are 100% independent from the lightbox.  
+
+2) code_canyon_preview: The exact preview that can be found on CodeCanyon
+
+3) deploy: Individual lightbox examples with "minified" scripts/css.  This means the scripts/css files have been compressed so they load faster.
+
+5) help: The main help document.  I tried to cover as many topics as possible, but feel free to email me here if you have any questions: 
+
+http://codecanyon.net/user/CodingJack
+
+6) source: Identical to "deploy" except nothing is minified.  Use these files if you wish to change the CSS or JavaScript files.  After making changes, for faster loading you can minify the CSS/JS files by using the following tools:
+
+JS:  http://closure-compiler.appspot.com/home
+CSS: http://www.refresh-sf.com/yui/
