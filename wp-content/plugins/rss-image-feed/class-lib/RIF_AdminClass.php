@@ -130,7 +130,9 @@ class RIF_Admin extends A5_OptionPage {
 		
 		add_settings_section('image_rss_settings', __('RSS Settings', self::language_file), array(&$this, 'display_section'), 'new_image_settings');
 		
-		add_settings_field('image_size', __('Imagesize:', self::language_file), array(&$this, 'display_imgsize'), 'new_image_settings', 'image_rss_settings');
+		add_settings_field('image_size', __('Image Size:', self::language_file), array(&$this, 'display_imgsize'), 'new_image_settings', 'image_rss_settings');
+		
+		add_settings_field('image_number', __('Image Number:', self::language_file), array(&$this, 'display_imgnmbr'), 'new_image_settings', 'image_rss_settings');
 		
 		add_settings_field('force_excerpt', __('Force Excerpt:', self::language_file), array(&$this, 'display_force'), 'new_image_settings', 'image_rss_settings');
 		
@@ -150,6 +152,12 @@ class RIF_Admin extends A5_OptionPage {
 		
 	}
 	
+	function display_imgnmbr() {
+		
+		a5_text_field('image_number', 'rss_options[image_number]', self::$options['image_number'], sprintf(__('To use an image of the post instead of the post thumbnail, enter the number of that image. The word %s will bring the last image of the post.', self::language_file), '&#39;last&#39;'));
+		
+	}
+	
 	function display_force() {
 		
 		a5_checkbox('force_excerpt', 'rss_options[force_excerpt]', self::$options['force_excerpt'], __('Click, to limit the post content to a summary if the post doesn&#39;t have an excerpt.', self::language_file));
@@ -165,6 +173,7 @@ class RIF_Admin extends A5_OptionPage {
 	function validate_options($input) {
 		
 		$newinput['image_size'] = trim($input['image_size']);
+		$newinput['image_number'] = trim($input['image_number']);
 		$newinput['force_excerpt'] = (isset($input['force_excerpt'])) ? true : false;
 		$newinput['excerpt_size'] = trim($input['excerpt_size']);
 		
@@ -175,8 +184,6 @@ class RIF_Admin extends A5_OptionPage {
 				$newinput['image_size'] = 200;
 				
 			endif;
-			
-			$newinput['image_size'] = intval($newinput['image_size']);
 			
 			if(!is_numeric($newinput['excerpt_size'])) :
 			
@@ -196,11 +203,20 @@ class RIF_Admin extends A5_OptionPage {
 				
 			endif;
 			
+			$newinput['image_size'] = intval($newinput['image_size']);
+			
 			if ($newinput['image_size'] != self::$options['image_size']) add_image_size( 'rss-image', $newinput['image_size'], $newinput['image_size'] );
+			
+			if(!empty($newinput['image_number']) && !is_numeric($newinput['image_number'])) :
+			
+				$newinput['image_number'] = 'last';
+				
+			endif;
 			
 		self::$options['image_size'] = $newinput['image_size'];
 		self::$options['force_excerpt'] = $newinput['force_excerpt'];
 		self::$options['excerpt_size'] = $newinput['excerpt_size'];
+		self::$options['image_number'] = $newinput['image_number'];
 		
 		return self::$options;
 		
